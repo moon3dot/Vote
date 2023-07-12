@@ -1,24 +1,40 @@
 export interface vote{
+    //name vote
     email:string,
-    saturday:boolean,
+    //day
+    satDay:boolean,
+    //time
     satMornig:boolean,
     satNoon:boolean,
-    sunday:boolean,
-    sunmornig:boolean,
+    satNight:boolean,
+    //next day
+    sunDay:boolean,
+    sunMornig:boolean,
     sunNoon:boolean,
-    monday:boolean,
-    monmornig:boolean,
+    sunNight:boolean,
+    //next day
+    monDay:boolean,
+    monMornig:boolean,
     monNoon:boolean,
-    tuesday:boolean,
-    tuesmornig:boolean,
+    monNight:boolean,
+    //next day
+    tuesDay:boolean,
+    tuesMornig:boolean,
     tuseNoon:boolean,
-    wednesday:boolean,
-    wenmornig:boolean,
-    wenNoon:boolean,
-    thursday:boolean,
-    thurmornig:boolean,
+    tuseNight:boolean
+    //next day
+    wedDay:boolean,
+    wedMornig:boolean,
+    wedNoon:boolean,
+    wedNight:boolean,
+    //next day
+    thurDay:boolean,
+    thurMornig:boolean,
     thurNoon:boolean,
-    friday:boolean,
-    friymornig:boolean,
-    friyNoon:boolean
+    thurNight:boolean,
+    //next day
+    friyDay:boolean,
+    friyMornig:boolean,
+    friyNoon:boolean,
+    friyNight:boolean
 };
