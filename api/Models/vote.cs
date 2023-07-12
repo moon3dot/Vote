@@ -1,31 +1,30 @@
 namespace api.Models;
 
-
-public record day(
+public record vote(
     //name voter
     string Email,
     // day
-    bool ?Saturday,
+    bool ?SaturDay,
     // time  mornig and noon
     bool ?satMornig,
     bool ?SatNoon,
     //nextDay
-    bool ?Sunday,
-    bool ?Sunmornig,
+    bool ?SunDay,
+    bool ?SunMornig,
     bool ?SunNoon,
-    bool ?Monday,
-    bool ?Monmornig,
+    bool ?MonDay,
+    bool ?MonMornig,
     bool ?MonNoon,
-    bool ?Tuesday,
-    bool ?Tuesmornig,
+    bool ?TuesDay,
+    bool ?TuesMornig,
     bool ?TuseNoon,
-    bool ?Wednesday,
-    bool ?Wenmornig,
+    bool ?WednesDay,
+    bool ?WenMornig,
     bool ?WenNoon,
-    bool ?Thursday,
-    bool ?Thurmornig,
+    bool ?ThursDay,
+    bool ?ThurMornig,
     bool ?ThurNoon,
-    bool ?Friday,
-    bool ?Friymornig,
+    bool ?FriDay,
+    bool ?FriyMornig,
     bool ?FriyNoon
 );
