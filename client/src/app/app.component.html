@@ -1,0 +1,55 @@
+<main>
+  <section>
+    <div class="divForm">
+      <form [formGroup]="fmVote">
+        <div class="mat-form-field">
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email"  formControlName="emailCtrl" matInput placeholder="لطفا ایمیل حودتون رو وارد کنید">
+          </mat-form-field>
+        </div>
+        <div class="satcheckbox">
+          <label class="example-margin">شنبه:</label>
+          <mat-checkbox class="example-margin">صبح</mat-checkbox>
+          <mat-checkbox class="example-margin">بعد از ظهر</mat-checkbox>
+        </div>
+        <div class="suncheckbox">
+          <label class="example-margin">یکشنبه:</label>
+          <mat-checkbox class="example-margin">صبح</mat-checkbox>
+          <mat-checkbox class="example-margin">بعد از ظهر</mat-checkbox>
+        </div>
+        <div class="suncheckbox">
+          <label class="example-margin">دوشنبه:</label>
+          <mat-checkbox class="example-margin">صبح</mat-checkbox>
+          <mat-checkbox class="example-margin">بعد از ظهر</mat-checkbox>
+        </div>
+        <div class="suncheckbox">
+          <label class="example-margin">سه شنبه:</label>
+          <mat-checkbox class="example-margin">صبح</mat-checkbox>
+          <mat-checkbox class="example-margin">بعد از ظهر</mat-checkbox>
+        </div>
+        <div class="suncheckbox">
+          <label class="example-margin">چهارشنبه:</label>
+          <mat-checkbox class="example-margin">صبح</mat-checkbox>
+          <mat-checkbox class="example-margin">بعد از ظهر</mat-checkbox>
+        </div>
+        <div class="suncheckbox">
+          <label class="example-margin">پنجشنبه:</label>
+          <mat-checkbox class="example-margin">صبح</mat-checkbox>
+          <mat-checkbox class="example-margin">بعد از ظهر</mat-checkbox>
+        </div>
+        <div class="suncheckbox">
+          <label class="example-margin">جمعه:</label>
+          <mat-checkbox class="example-margin">صبح</mat-checkbox>
+          <mat-checkbox class="example-margin">بعد از ظهر</mat-checkbox>
+        </div>
+        <button  mat-raised-button color="primary">Register Vote</button>
+      </form>
+    </div>
+    <div class="divHint">
+      <p>سلام حالتوت چطوره  ممنون میشم روز های خالی خودتون رو که برای کلاس راحت تر هستید انتخاب کنید 
+        همین طور میتونید تایم صبح یا عصر بودن رو هم بهمون بگید 
+        (راستی اگه هم عصر و هم صلح رو انتخاب کنی یعنی کل روز میتونی تایم بزاری)</p>
+    </div>
+  </section>
+</main>
