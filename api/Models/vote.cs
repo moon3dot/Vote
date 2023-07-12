@@ -7,7 +7,7 @@ public record day(
     // day
     bool ?Saturday,
     // time  mornig and noon
-    bool ?Satmornig,
+    bool ?satMornig,
     bool ?SatNoon,
     //nextDay
     bool ?Sunday,

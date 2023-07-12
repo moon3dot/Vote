@@ -34,7 +34,7 @@ public class VoteController : ControllerBase
             day NewVote = new day(
                 Email:RequstVote.Email,
                 Saturday:RequstVote.Saturday,
-                Satmornig:RequstVote.Satmornig,
+                satMornig:RequstVote.satMornig,
                 SatNoon:RequstVote.SatNoon,
                 Sunday:RequstVote.Sunday,
                 Sunmornig:RequstVote.Sunmornig,

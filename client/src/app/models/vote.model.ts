@@ -1,7 +1,7 @@
 export interface vote{
     email:string,
     saturday:boolean,
-    satmornig:boolean,
+    satMornig:boolean,
     satNoon:boolean,
     sunday:boolean,
     sunmornig:boolean,
