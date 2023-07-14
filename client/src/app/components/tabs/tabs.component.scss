@@ -1,0 +1,102 @@
+.tabs {
+    display: flex;
+    background-color: rgba($color: rgb(255, 255, 255), $alpha: 0.25);
+    backdrop-filter: blur(0.1 rem);
+    border-radius: 1rem;
+    margin: 0.9rem;
+    margin-top: 3rem;
+    padding: 1rem;
+
+    a {
+        background: transparent;
+        color: #222;
+        text-decoration: none;
+    }
+
+    .tab {
+        position: relative;
+        z-index: 1;
+
+        &:not(:last-child) {
+            margin-right: 0.9rem;
+        }
+
+        .tab-Title {
+            padding: 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all 0.4s;
+
+            i {
+                color: #222;
+            }
+        }
+                // start style color & position tabs
+        .tab-Title::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 0.5rem;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.9;
+            transition: all 0.2s;
+        }
+
+        .tab-Title:hover::before {
+            opacity: 1;
+            transform: scale(0.9);
+        }
+
+    }
+
+    .bookmarks-Tab .tab-Title::before {
+        background: linear-gradient(45deg, #f8b5a5, #e2d2fd);
+    }
+
+    .check-Tab .tab-Title::before {
+        background: linear-gradient(45deg, #a2ffff, #ffbdde);
+    }
+
+    .notes-Tab .tab-Title::before {
+        background: linear-gradient(45deg, #d2cdff, #5fffbc);
+    }
+
+    .tab.selected .tab-Title::before {
+        border-radius: 50%;
+        box-shadow: 0 8px 12px rgba($color: black, $alpha: 0.5);
+
+
+    }
+
+    .tab.selected .tab-Title {
+        transform: translateY(-30px);
+        transition-duration: 0.4s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 2.2);
+
+    }
+    //end style button tabs
+    // style under line
+    .tab::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 50%;
+        background-color: white;
+        margin: auto;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        border-radius: 1rem;
+        transition: all 0.2s;
+        transform: scaleX(0);
+    }
+
+    .tab.selected::after {
+        opacity: 1;
+        transform: scaleX(1);
+        transition-delay: 0.2s;
+    }
+}
