@@ -7,9 +7,19 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 
+//components
 import { ClockComponent } from './components/clock/clock.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { VoteComponent } from './components/vote/vote.component'; 
+
+//material
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatButtonModule} from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
+import {ReactiveFormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +33,16 @@ import { VoteComponent } from './components/vote/vote.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+
+    //material
+    MatInputModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatListModule,
+    ReactiveFormsModule,
+    FormsModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]

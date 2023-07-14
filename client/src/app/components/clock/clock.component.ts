@@ -9,7 +9,7 @@ import { Data } from '@angular/router';
 export class ClockComponent implements OnInit{
 
 private daysArray = [
-  'satDay' , 'sunDay' , 'monDay' , 'tuseDay' , 'wednDAy' , 'thusDay' , 'friyDay'];
+  'saturday' , 'sunDay' , 'monDay' , 'tuseday' , 'wednDAy' , 'thusDay' , 'friyDay'];
 
 private date =new Date();
 
@@ -18,6 +18,8 @@ public minute: string | undefined;
 public second : string | undefined;
 public ampm : string | undefined;
 public day : string | undefined;
+//
+
 
 ngOnInit() {
   setInterval(()=>{
