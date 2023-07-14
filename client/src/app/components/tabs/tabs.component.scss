@@ -1,15 +1,12 @@
 .tabs {
     display: flex;
-    background-color: rgba($color: rgb(255, 255, 255), $alpha: 0.25);
-    backdrop-filter: blur(0.1 rem);
-    border-radius: 1rem;
     margin: 0.9rem;
     margin-top: 3rem;
     padding: 1rem;
 
     a {
         background: transparent;
-        color: #222;
+        color: #000000;
         text-decoration: none;
     }
 
@@ -37,7 +34,7 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            border-radius: 0.5rem;
+            border-radius: 5rem;
             top: 0;
             left: 0;
             z-index: -1;
@@ -53,15 +50,15 @@
     }
 
     .bookmarks-Tab .tab-Title::before {
-        background: linear-gradient(45deg, #f8b5a5, #e2d2fd);
+        background: linear-gradient(45deg, #bdbdbd, #bfbfbf);
     }
 
     .check-Tab .tab-Title::before {
-        background: linear-gradient(45deg, #a2ffff, #ffbdde);
+        background: linear-gradient(45deg, #bdbdbd, #bfbfbf);
     }
 
     .notes-Tab .tab-Title::before {
-        background: linear-gradient(45deg, #d2cdff, #5fffbc);
+        background: linear-gradient(45deg, #bdbdbd, #bfbfbf);
     }
 
     .tab.selected .tab-Title::before {

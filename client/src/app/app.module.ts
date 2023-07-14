@@ -6,17 +6,16 @@ import { AppComponent } from './app.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
-import { BookmarksComponent } from './components/bookmarks/bookmarks.component';
-import { CheckComponent } from './components/check/check.component';
-import { NotesComponent } from './components/notes/notes.component'; 
+
+import { ClockComponent } from './components/clock/clock.component';
+import { HomeComponent } from './components/home/home.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsComponent,
-    BookmarksComponent,
-    CheckComponent,
-    NotesComponent
+    ClockComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
