@@ -8,14 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 
 import { ClockComponent } from './components/clock/clock.component';
-import { HomeComponent } from './components/home/home.component'; 
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { VoteComponent } from './components/vote/vote.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsComponent,
     ClockComponent,
-    HomeComponent,
+    NotFoundComponent,
+    VoteComponent,
   ],
   imports: [
     BrowserModule,
