@@ -20,6 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {ReactiveFormsModule} from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { FormsModule } from '@angular/forms';
     MatListModule,
     ReactiveFormsModule,
     FormsModule,    
+    MatSlideToggleModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

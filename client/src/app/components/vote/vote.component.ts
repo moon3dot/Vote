@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Task } from 'src/app/models/task.model';
 
 @Component({
@@ -7,35 +8,8 @@ import { Task } from 'src/app/models/task.model';
   styleUrls: ['./vote.component.scss']
 })
 export class VoteComponent {
-  task: Task = {
-    name: 'Indeterminate',
-    completed: false,
-    color: 'primary',
-    subtasks: [
-      {name: 'Primary', completed: false, color: 'primary'},
-      {name: 'Accent', completed: false, color: 'accent'},
-      {name: 'Warn', completed: false, color: 'warn'},
-    ],
+  toppings = new FormControl('');
+  toppingList: string[] = ['10-14', '11-15', '12-16', '13-17', '14-18', '15-19' , '16-20' , '17-21'];  
+  
   };
-
-  allComplete: boolean = false;
-
-  updateAllComplete() {
-    this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed);
-  }
-
-  someComplete(): boolean {
-    if (this.task.subtasks == null) {
-      return false;
-    }
-    return this.task.subtasks.filter(t => t.completed).length > 0 && !this.allComplete;
-  }
-
-  setAll(completed: boolean) {
-    this.allComplete = completed;
-    if (this.task.subtasks == null) {
-      return;
-    }
-    this.task.subtasks.forEach(t => (t.completed = completed));
-  }
-}
+ 
