@@ -6,8 +6,8 @@ import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
 
-  { path: '', component: VoteComponent },
-  { path: 'getVote', component: RegisterComponent },
+  { path: '', component: RegisterComponent },
+  { path: 'getVote', component: VoteComponent },
   { path: '**', component: NotFoundComponent }
 
 ];
