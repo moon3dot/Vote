@@ -9,7 +9,7 @@ import { Data } from '@angular/router';
 export class ClockComponent implements OnInit{
 
 private daysArray = [
-  'saturday' , 'sunDay' , 'monDay' , 'tuseday' , 'wednDAy' , 'thusDay' , 'friyDay'];
+  'saturday' , 'sunday' , 'monday' , 'tuseday' , 'wednesday' , 'thusday' , 'friyday'];
 
 private date =new Date();
 

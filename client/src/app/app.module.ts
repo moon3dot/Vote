@@ -22,6 +22,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
+import { RegisterComponent } from './components/register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import {MatSelectModule} from '@angular/material/select';
     ClockComponent,
     NotFoundComponent,
     VoteComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

@@ -28,7 +28,7 @@ export interface Day {
 
 enum EnumTime{
     prd10To14,
-    prd11To15,
+    prd11To15,//period
     prd12To16,
     prd13To17,
     prd14To18,
