@@ -4,7 +4,7 @@ enum EnumDay{
     monday,
     tuesday, 
     wednesday, 
-    thursday, 
+    thursday,
     friday
 };
 

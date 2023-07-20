@@ -15,8 +15,6 @@ private date =new Date();
 
 public hour: any;
 public minute: string | undefined;
-public second : string | undefined;
-public ampm : string | undefined;
 public day : string | undefined;
 //
 
@@ -34,9 +32,6 @@ private updateDate(date : Date){
 
     const minutes = date.getMinutes();
     this.minute= minutes.toString(); 
-
-    const seconds = date.getSeconds();
-    this.second = seconds.toString();
 };
 
 } 
