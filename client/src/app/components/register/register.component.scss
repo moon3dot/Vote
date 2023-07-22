@@ -12,17 +12,17 @@ main {
         backdrop-filter: blur(1.5rem);
         border-radius: 1rem;
         width: calc(50vh);
-        height: 50vh;
-        padding: 1rem;
+        min-height: 20rem;
         display: flex;
-        
+
         align-items: center;
-        
+
 
         form {
-            
+
             display: flex;
             flex-direction: column;
+
             mat-form-field {
 
                 mat-label {

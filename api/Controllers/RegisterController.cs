@@ -37,7 +37,10 @@ public class RegisterController : ControllerBase
             Register addVoter = new Register(
                 Id: null,
                 Name: userInput.Name.Trim().ToLower(),
-                Email: userInput.Email.Trim().ToLower()
+                Email: userInput.Email.Trim().ToLower(),
+                Password: userInput.Password,
+                ConfirmPass: userInput.ConfirmPass,
+                IsAdmin: null
             );
 
             _collection.InsertOne(addVoter);

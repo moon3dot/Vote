@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { Voter } from 'src/app/models/voter.model';
+import { register } from 'src/app/models/registeer.model';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,40 +10,29 @@ import { Voter } from 'src/app/models/voter.model';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private service: AuthService) {
+    localStorage.clear();
+  }
 
-  Gvoter: Voter | undefined;
-
-
-  //#region Create Form Group/controler (AbstractControl)
   registerFg = this.fb.group({
-    nameCtrl: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
-    emailCtrl: ['', [Validators.required, Validators.pattern(/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,5})+)$/)]]
-  });
-  //#endregion
+    nameCtrl: ['', [Validators.required, Validators.min(3), Validators.maxLength(25)]],
+    emailCtrl: ['', [Validators.required, Validators.pattern(/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,5})+)$/)]],
+    passwordCtrl: ['', [Validators.required, Validators.pattern("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$")]],
+    confirmPassCtrl: ['', [Validators.required, Validators.pattern("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$")]],
+  })
 
-  //#region Forms Properties
   get NameCtrl(): FormControl {
     return this.registerFg.get('nameCtrl') as FormControl;
   }
   get EmailCtrl(): FormControl {
     return this.registerFg.get('emailCtrl') as FormControl;
   }
-  //#endregion
-
-  registeVoter(): void {
-    let voter: Voter = {
-      name: this.NameCtrl.value,
-      email: this.EmailCtrl.value
-    }
-    console.log(voter)
-
-    this.http.post<Voter>('http://localhost:5000/api/Register/addVoter', voter).subscribe(
-      {
-        next: Response => {
-          this.Gvoter = Response;
-        }
-      }
-    )
+  get PasswordCtrl(): FormControl {
+    return this.registerFg.get('passwordCtrl') as FormControl;
   }
+  get ConfirmPassCtrl(): FormControl {
+    return this.registerFg.get('confirmPassCtrl') as FormControl;
+  }
+
+  submitFg() { }
 }

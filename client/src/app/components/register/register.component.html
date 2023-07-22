@@ -1,20 +1,19 @@
 <main>
-
     <section>
-
         <form [formGroup]="registerFg">
             <mat-form-field>
-                <mat-label>Full Name</mat-label>
-                <input type="text" placeholder="Enter your Name" formControlName="nameCtrl" matInput>
-                <mat-hint>pless Enter your full name</mat-hint>
+                <input type="text" placeholder="Your name" matInput formControlName="nameCtel">
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Email</mat-label>
-                <input type="email" placeholder="Enter your Email" formControlName="emailCtrl" matInput>
-                <mat-hint>Enter your email </mat-hint>
+                <input type="email" placeholder="Your email" matInput>
             </mat-form-field>
-            <button (click)='registeVoter()' [disabled]="registerFg.invalid" mat-raised-button>Register</button>
+            <mat-form-field>
+                <input type="password" placeholder="Your password" matInput>
+            </mat-form-field>
+            <mat-form-field>
+                <input type="password" placeholder="Confirm password" matInput>
+            </mat-form-field>
+            <button (click)="submitFg()" [disabled]="">register</button>
         </form>
-
     </section>
 </main>
