@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { Task } from 'src/app/models/task.model';
 
 @Component({
   selector: 'app-vote',

@@ -28,6 +28,14 @@ import { TopnavborComponent } from './components/topnavbor/topnavbor.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { HelpComponent } from './components/help/help.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ProfileComponent } from './components/profile/profile.component';
+import { UpdatePassComponent } from './components/update-pass/update-pass.component';
+import { MyVoteComponent } from './components/my-vote/my-vote.component';
+import { EditVoteComponent } from './components/edit-vote/edit-vote.component';
+import { CadminComponent } from './components/cadmin/cadmin.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { GetVoteComponent } from './components/get-vote/get-vote.component';
+import { GetVoterComponent } from './components/get-voter/get-voter.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +47,14 @@ import {MatExpansionModule} from '@angular/material/expansion';
     LoginComponent,
     TopnavborComponent,
     HelpComponent,
+    ProfileComponent,
+    UpdatePassComponent,
+    MyVoteComponent,
+    EditVoteComponent,
+    CadminComponent,
+    SliderComponent,
+    GetVoteComponent,
+    GetVoterComponent,
   ],
   imports: [
     BrowserModule,
