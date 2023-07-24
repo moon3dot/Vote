@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { register } from 'src/app/models/registeer.model';
 import { AuthService } from 'src/app/service/auth.service';
+import { RegisterService } from 'src/app/service/register.service';
 
 @Component({
   selector: 'app-register',
@@ -12,9 +13,9 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class RegisterComponent {
 
-  responsedata: any;
   userRegister: any;
-  constructor(private fb: FormBuilder, private service: AuthService, private route: Router) {
+
+  constructor(private fb: FormBuilder, private service: RegisterService, private route: Router) {
     localStorage.clear();
   }
 
@@ -47,7 +48,8 @@ export class RegisterComponent {
       confirmPass: this.ConfirmPassCtrl.value
     }
 
-    this.service.RegisterVoter('').subscribe(
+
+    this.service.postUser('').subscribe(
       {
         next: res => {
           this.userRegister = res
