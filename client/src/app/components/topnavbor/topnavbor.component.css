@@ -1,0 +1,31 @@
+main section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main section div {
+  width: 50%;
+  background-color: rgba(250, 254, 255, 0.46);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 0px 0px 30px 30px;
+  align-items: center;
+}
+main section div a {
+  color: black;
+  text-decoration: none;
+}
+main section div a h1 {
+  font-family: Italiana;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+main section div button {
+  background: rgba(246, 125, 13, 0.9);
+  color: black;
+  padding: 1rem;
+  font-family: Italiana;
+}/*# sourceMappingURL=topnavbor.component.css.map */

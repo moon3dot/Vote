@@ -13,17 +13,17 @@ import { RegisterService } from 'src/app/service/register.service';
 })
 export class RegisterComponent {
 
-  userRegister: any;
+  globalUserRegister: register | undefined;
 
-  constructor(private fb: FormBuilder, private service: RegisterService, private route: Router) {
+  constructor(private fb: FormBuilder, private service: RegisterService, private router: Router, private http: HttpClient) {
     localStorage.clear();
   }
 
   registerFg = this.fb.group({
     nameCtrl: ['', [Validators.required, Validators.min(3), Validators.maxLength(25)]],
     emailCtrl: ['', [Validators.required, Validators.pattern(/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,5})+)$/)]],
-    passwordCtrl: ['', [Validators.required, Validators.pattern("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$")]],
-    confirmPassCtrl: ['', [Validators.required, Validators.pattern("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$")]],
+    passwordCtrl: ['', [Validators.required]],
+    confirmPassCtrl: ['', [Validators.required]],
   });
 
   get NameCtrl(): FormControl {
@@ -39,7 +39,7 @@ export class RegisterComponent {
     return this.registerFg.get('confirmPassCtrl') as FormControl;
   };
 
-  submitFg() {
+  submitFg(): void {
 
     let userRegister: register = {
       name: this.NameCtrl.value,
@@ -47,13 +47,21 @@ export class RegisterComponent {
       password: this.PasswordCtrl.value,
       confirmPass: this.ConfirmPassCtrl.value
     }
+    console.log(userRegister);
 
-
-    this.service.postUser('').subscribe(
+    // this.http.post<register>('http://localhost:5000/api/Register/register', userRegister).subscribe(
+    //   {
+    //     next: res => {
+    //       this.globalUserRegister = res;
+    //       this.router.navigateByUrl('');
+    //     }
+    //   }
+    // )
+    this.service.postUser(userRegister).subscribe(
       {
         next: res => {
-          this.userRegister = res
-          console.log(this.userRegister.value)
+          userRegister = res;
+          this.router.navigateByUrl('');
         }
       }
     )
