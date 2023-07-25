@@ -28,7 +28,7 @@ public class RegisterController : ControllerBase
         bool hasDoc = _collection.AsQueryable().Where<Register>(u => u.Email == userInput.Email).Any();
 
         if (hasDoc)
-            return BadRequest($"this {userInput} allrealy exist");
+            return BadRequest($"this {userInput.Email} allrealy exist");
 
         Register register = new Register(
             Id: null,
@@ -41,10 +41,11 @@ public class RegisterController : ControllerBase
 
         await _collection.InsertOneAsync(register);
 
-        return register;
+        return register.Email;
     }
     #endregion
 
+    #region post login User
     [HttpPost("login")]
     public async Task<ActionResult<Register>> loginUser([FromBody] Register userInput)
     {
@@ -56,6 +57,7 @@ public class RegisterController : ControllerBase
         }
         return Ok(user.Email);
     }
+    #endregion
 }
 
 
