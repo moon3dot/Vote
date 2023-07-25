@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { register } from 'src/app/models/registeer.model';
 import { LoginService } from 'src/app/service/login.service';
 
 @Component({
@@ -7,8 +10,35 @@ import { LoginService } from 'src/app/service/login.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  
-  constructor(private service:LoginService){};
 
-  
-}
+  constructor(private service: LoginService, private fb: FormBuilder, private router: Router) { };
+
+  loginFg = this.fb.group({
+    emailctrl: ['', [Validators.email, Validators.required]],
+    passwordCtrl: ['', [Validators.required]]
+  });
+
+  get EmailCtrl(): FormControl {
+    return this.loginFg.get('emailctrl') as FormControl;
+  };
+  get PasswordCtrl(): FormControl {
+    return this.loginFg.get('passwordCtrl') as FormControl;
+  };
+
+  submitlogin(): void {
+
+    let userlogin: register = {
+      email: this.EmailCtrl.value,
+      password: this.PasswordCtrl.value
+    }
+    console.log(userlogin);
+
+    this.service.loginUser(userlogin).subscribe({
+
+      next: res => {
+        userlogin = res;
+        this.router.navigateByUrl('');
+      }
+    });
+  };
+};

@@ -1,7 +1,7 @@
 export interface register {
-    name: string,
+    name?: string,
     email: string,
     password: string,
-    confirmPass: string,
+    confirmPass?: string,
     isAdmin? : boolean
 }
