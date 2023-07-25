@@ -45,9 +45,14 @@ public class RegisterController : ControllerBase
     #endregion
 
     [HttpPost("login")]
-    public async Task<ActionResult<Register>> Login([FromBody] Register userInput)
+    public ActionResult<Register> Login([FromBody] Register userInput)
     {
-        Register user = await _collection.FindAsync<Register>(doc => doc.Email == userInput.Email && doc.Password == userInput.Password).FirstOrDefaultAsync();
+        Register user = _collection.Find<Register>(doc => doc.Email == userInput.Email && doc.Password == userInput.Password).FirstOrDefault();
+
+        if (user is null)
+        {
+            return Unauthorized("Wrong username or password");
+        }
 
         return user;
     }
