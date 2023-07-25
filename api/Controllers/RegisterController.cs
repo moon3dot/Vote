@@ -44,18 +44,6 @@ public class RegisterController : ControllerBase
     }
     #endregion
 
-    [HttpPost("login")]
-    public ActionResult<Register> Login([FromBody] Register userInput)
-    {
-        Register user = _collection.Find<Register>(doc => doc.Email == userInput.Email && doc.Password == userInput.Password).FirstOrDefault();
-
-        if (user is null)
-        {
-            return Unauthorized("Wrong username or password");
-        }
-
-        return user;
-    }
 }
 
 

@@ -32,6 +32,7 @@ builder.Services.AddCors(options =>
 #endregion Cors
 
 builder.Services.AddControllers();
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
 
