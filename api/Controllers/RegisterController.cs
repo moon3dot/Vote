@@ -20,6 +20,7 @@ public class RegisterController : ControllerBase
         _collection = dbName.GetCollection<Register>("users");
     }
     #endregion
+
     #region post register User
     [HttpPost("register")]
     public async Task<ActionResult<Register>> create([FromBody] Register userInput)
@@ -44,6 +45,17 @@ public class RegisterController : ControllerBase
     }
     #endregion
 
+    [HttpPost("login")]
+    public async Task<ActionResult<Register>> loginUser([FromBody] Register userInput)
+    {
+
+        Register user = await _collection.Find<Register>(u => u.Email == userInput.Email && u.Password == userInput.Password).FirstOrDefaultAsync();
+
+        if(user == null){
+            return NotFound("Email or password is not correct");
+        }
+        return Ok(user.Email);
+    }
 }
 
 
