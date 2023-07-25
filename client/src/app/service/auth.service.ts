@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  apiurl = 'http://localhost:5000/api/Register/addVoter'
+  apiurl = 'http://localhost:5000/api/User/addVoter'
   constructor(private http: HttpClient) { }
 
   RegisterVoter<register>(usercred: any) {

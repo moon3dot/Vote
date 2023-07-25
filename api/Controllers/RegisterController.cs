@@ -4,6 +4,8 @@ using MongoDB.Driver;
 
 namespace api.Controllers;
 
+
+
 [ApiController]
 [Route("api/[controller]")]
 public class RegisterController : ControllerBase
@@ -18,7 +20,7 @@ public class RegisterController : ControllerBase
         _collection = dbName.GetCollection<Register>("users");
     }
     #endregion
-
+    #region post register User
     [HttpPost("register")]
     public async Task<ActionResult<Register>> create([FromBody] Register userInput)
     {
@@ -40,4 +42,15 @@ public class RegisterController : ControllerBase
 
         return register;
     }
+    #endregion
+
+    [HttpPost("login")]
+    public async Task<ActionResult<Register>> Login([FromBody] Register userInput)
+    {
+        Register user = await _collection.FindAsync<Register>(doc => doc.Email == userInput.Email && doc.Password == userInput.Password).FirstOrDefaultAsync();
+
+        return user;
+    }
 }
+
+
