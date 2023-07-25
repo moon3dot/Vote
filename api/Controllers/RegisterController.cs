@@ -41,7 +41,7 @@ public class RegisterController : ControllerBase
 
         await _collection.InsertOneAsync(register);
 
-        return register.Email;
+        return register;
     }
     #endregion
 
