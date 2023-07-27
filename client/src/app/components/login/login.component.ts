@@ -11,6 +11,8 @@ import { LoginService } from 'src/app/service/login.service';
 })
 export class LoginComponent {
 
+  globLogin: register | undefined;
+  globError: string | undefined;
   constructor(private service: LoginService, private fb: FormBuilder, private router: Router) { };
 
   loginFg = this.fb.group({
@@ -33,10 +35,10 @@ export class LoginComponent {
     }
     console.log(userlogin);
 
-    this.service.loginUser(userlogin).subscribe({
-
+    this.service.loginUser(userlogin).subscribe(
+      {
       next: res => {
-        userlogin = res;
+        this.globLogin = res;
         this.router.navigateByUrl('');
       }
     });

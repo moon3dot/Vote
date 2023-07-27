@@ -13,7 +13,7 @@ import { RegisterService } from 'src/app/service/register.service';
 })
 export class RegisterComponent {
 
-globalUserRegister: register | undefined;
+  globalUserRegister: register | undefined;
 
   constructor(private fb: FormBuilder, private service: RegisterService, private router: Router, private http: HttpClient) {
     localStorage.clear();
@@ -60,7 +60,7 @@ globalUserRegister: register | undefined;
     this.service.postUser(userRegister).subscribe(
       {
         next: res => {
-          userRegister = res;
+        this.globalUserRegister = res;
           this.router.navigateByUrl('login');
         }
       }
