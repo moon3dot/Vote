@@ -56,7 +56,9 @@ public class RegisterController : ControllerBase
         {
             return NotFound("Email or password is not correct");
         }
-        return Ok(user.Email);
+        
+        return Ok(user.Name);
+
     }
 
     #endregion

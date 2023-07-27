@@ -11,12 +11,13 @@ main {
         background-color: rgba(60, 60, 60, 0.516);
         backdrop-filter: blur(1.5rem);
         border-radius: 1rem;
-        width: calc(50vh);
         min-height: 20rem;
         display: flex;
 
         align-items: center;
 
+        margin-top: 5rem;
+        padding: 1rem;
 
         form {
 

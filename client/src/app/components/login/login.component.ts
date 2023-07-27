@@ -13,6 +13,8 @@ export class LoginComponent {
 
   globLogin: register | undefined;
   globError: string | undefined;
+  globShow: register | undefined;
+
   constructor(private service: LoginService, private fb: FormBuilder, private router: Router) { };
 
   loginFg = this.fb.group({
@@ -33,14 +35,14 @@ export class LoginComponent {
       email: this.EmailCtrl.value,
       password: this.PasswordCtrl.value
     }
-    console.log(userlogin);
 
     this.service.loginUser(userlogin).subscribe(
       {
-      next: res => {
-        this.globLogin = res;
-        this.router.navigateByUrl('');
-      }
-    });
+        next: res => {
+          this.globLogin = res;
+          this.router.navigateByUrl('');
+          this.globShow = res;
+        }
+      });
   };
 };

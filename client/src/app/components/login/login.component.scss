@@ -1,0 +1,40 @@
+* {
+    margin: 0rem 1rem 0rem 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    section {
+        background-color: rgba(60, 60, 60, 0.516);
+        backdrop-filter: blur(1.5rem);
+        border-radius: 1rem;
+        min-height: 20rem;
+        display: flex;
+
+        align-items: center;
+
+        margin-top: 5rem;
+        padding: 1rem;
+
+        form {
+
+            display: flex;
+            flex-direction: column;
+
+            mat-form-field {
+
+                mat-label {
+                    color: coral;
+                }
+
+                mat-hint {
+                    color: rgb(255, 255, 255);
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
