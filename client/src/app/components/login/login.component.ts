@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -15,7 +16,7 @@ export class LoginComponent {
   globError: string | undefined;
   globShow: register | undefined;
 
-  constructor(private service: LoginService, private fb: FormBuilder, private router: Router) { };
+  constructor(private service: LoginService, private fb: FormBuilder, private router: Router, private http: HttpClient) { };
 
   loginFg = this.fb.group({
     emailctrl: ['', [Validators.email, Validators.required]],
@@ -36,13 +37,21 @@ export class LoginComponent {
       password: this.PasswordCtrl.value
     }
 
-    this.service.loginUser(userlogin).subscribe(
-      {
-        next: res => {
-          this.globLogin = res;
-          this.router.navigateByUrl('');
-          this.globShow = res;
-        }
-      });
+    // this.service.loginUser(userlogin).subscribe(
+    //   {
+    //     next: res => {
+    //       this.globLogin = res;
+    //       this.router.navigateByUrl('');
+    //       this.globShow = res;
+    //     }
+    //   });
+
+    this.http.post<register>("http://localhost:5000/api/Register/login" , userlogin).subscribe({
+    next: res => {
+      this.globLogin = res;
+      this.router.navigateByUrl('');
+      this.globShow = res;
+    }
+    });
   };
 };

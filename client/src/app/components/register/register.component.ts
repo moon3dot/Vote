@@ -47,7 +47,6 @@ export class RegisterComponent {
       password: this.PasswordCtrl.value,
       confirmPass: this.ConfirmPassCtrl.value
     }
-    console.log(userRegister);
 
     // this.http.post<register>('http://localhost:5000/api/Register/register', userRegister).subscribe(
     //   {
