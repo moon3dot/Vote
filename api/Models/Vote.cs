@@ -47,27 +47,12 @@ public enum EnumTime
 };
 
 public record Time(
-    EnumTime Prd10To14,
-    EnumTime Prd11To15,
-    EnumTime Prd12To16,
-    EnumTime Prd13To17,
-    EnumTime Prd14To18,
-    EnumTime Prd15To19,
-    EnumTime Prd16To20,
-    EnumTime Prd17To21
+    string Prd10To14,
+    string Prd11To15,
+    string Prd12To16,
+    string Prd13To17,
+    string Prd14To18,
+    string Prd15To19,
+    string Prd16To20,
+    string Prd17To21
 );
-
-public class Time2
-{
-    public EnumTime Prd11To15 { get; set; }
-    public EnumTime Prd12To16 { get; set; }
-    public EnumTime Prd10To14 { get; set; }
-    public EnumTime Prd13To17 { get; set; }
-    public EnumTime Prd14To18 { get; set; }
-    public EnumTime Prd15To19 { get; set; }
-    public EnumTime Prd16To20 { get; set; }
-    public EnumTime Prd17To21 { get; set; }
-}
-
-
-
