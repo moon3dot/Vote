@@ -9,50 +9,65 @@ public record Vote(
     [property: BsonId, BsonRepresentation(BsonType.ObjectId)]
     string? Id,
     EnumDay? Saturday,
-    Time? SaturdayTime,
+    EnumTime? SaturdayTime,
     EnumDay? Sunday,
-    Time? Sundaytime,
+    EnumTime? SundayTime,
     EnumDay? Monday,
-    Time? MondayTime,
+    EnumTime? MondayTime,
     EnumDay? Tuesday,
-    Time? TuesdayTime,
+    EnumTime? TuesdayTime,
     EnumDay? Wednesday,
-    Time? WednesdayTime,
+    EnumTime? WednesdayTime,
     EnumDay? Thursday,
-    Time? ThursdayTime,
+    EnumTime? ThursdayTime,
     EnumDay? Friday,
-    Time? FridayTime
+    EnumTime? FridayTime
 );
 public enum EnumDay
 {
-    saturday,
-    sunday,
-    monday,
-    tuesday,
-    wednesday,
-    thursday,
-    friday
+    Saturday,
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday
 };
 
 public enum EnumTime
 {
-    prd10To14,
-    prd11To15,//period
-    prd12To16,
-    prd13To17,
-    prd14To18,
-    prd15To19,
-    prd16To20,
-    prd17To21
+    Prd10To14,
+    Prd11To15,//period
+    Prd12To16,
+    Prd13To17,
+    Prd14To18,
+    Prd15To19,
+    Prd16To20,
+    Prd17To21
 };
 
 public record Time(
-    EnumTime prd11To15,
-    EnumTime prd12To16,
-    EnumTime prd10To14,
-    EnumTime prd13To17,
-    EnumTime prd14To18,
-    EnumTime prd15To19,
-    EnumTime prd16To20,
-    EnumTime prd17To21
+    EnumTime Prd10To14,
+    EnumTime Prd11To15,
+    EnumTime Prd12To16,
+    EnumTime Prd13To17,
+    EnumTime Prd14To18,
+    EnumTime Prd15To19,
+    EnumTime Prd16To20,
+    EnumTime Prd17To21
 );
+
+public class Time2
+{
+    public EnumTime Prd11To15 { get; set; }
+    public EnumTime Prd12To16 { get; set; }
+    public EnumTime Prd10To14 { get; set; }
+    public EnumTime Prd13To17 { get; set; }
+    public EnumTime Prd14To18 { get; set; }
+    public EnumTime Prd15To19 { get; set; }
+    public EnumTime Prd16To20 { get; set; }
+    public EnumTime Prd17To21 { get; set; }
+}
+
+
+
