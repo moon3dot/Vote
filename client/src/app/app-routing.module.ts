@@ -7,14 +7,15 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { HelpComponent } from './components/help/help.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent ,canActivate:[AuthGuard]},
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'getVote', component: VoteComponent },
+  { path: 'getVote', component: VoteComponent  ,canActivate:[AuthGuard]},
   { path: 'help', component: HelpComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent  ,canActivate:[AuthGuard]},
   { path: '**', component: NotFoundComponent }
 ];
 

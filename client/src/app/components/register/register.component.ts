@@ -15,9 +15,16 @@ export class RegisterComponent {
 
   globalUserRegister: register | undefined;
 
-  constructor(private fb: FormBuilder, private service: RegisterService, private router: Router, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private registerS: RegisterService, private router: Router, private http: HttpClient) {
     localStorage.clear();
   }
+
+  ngOnInit(): void {}
+  
+  // metude server
+  // singnUp(data :register):void{
+  //   this.registerS.userSingUp(data)
+  // }
 
   registerFg = this.fb.group({
     nameCtrl: ['', [Validators.required, Validators.min(3), Validators.maxLength(25)]],
@@ -47,6 +54,9 @@ export class RegisterComponent {
       password: this.PasswordCtrl.value,
       confirmPass: this.ConfirmPassCtrl.value
     }
+    this.registerS.userSingUp(userRegister)
+  }
+}
 
     // this.http.post<register>('http://localhost:5000/api/Register/register', userRegister).subscribe(
     //   {
@@ -56,14 +66,12 @@ export class RegisterComponent {
     //     }
     //   }
     // )
-    this.service.postUser(userRegister).subscribe(
-      {
-        next: res => {
-        this.globalUserRegister = res;
-          this.router.navigateByUrl('login');
-        }
-      }
-    )
-  }
-}
+    // this.service.userSingUp(userRegister).subscribe(
+    //   {
+    //     next: res => {
+    //     this.globalUserRegister = res;
+    //       this.router.navigateByUrl('login');
+    //     }
+    //   }
+    // )
 

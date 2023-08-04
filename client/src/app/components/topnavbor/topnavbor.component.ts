@@ -10,7 +10,7 @@ export class TopnavborComponent {
 constructor(private rout :Router){}
 
   logout(){
-    localStorage.removeItem('');
+    localStorage.removeItem('user');
     this.rout.navigateByUrl('login');
   }
 }

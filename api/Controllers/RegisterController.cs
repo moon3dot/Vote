@@ -53,7 +53,7 @@ public class RegisterController : ControllerBase
         Register user = await _collection.Find<Register>(u => u.Email == userInput.Email && u.Password == userInput.Password).FirstOrDefaultAsync();
 
         if (user == null)
-            return NotFound("Email or password is not correct");
+            return Unauthorized("Email or password is not correct");
 
         return user;
 

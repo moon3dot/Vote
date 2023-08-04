@@ -16,7 +16,7 @@ export class LoginComponent {
   globError: string | undefined;
   globShow: register | undefined;
 
-  constructor(private service: LoginService, private fb: FormBuilder, private router: Router, private http: HttpClient) { };
+  constructor(private registerS: LoginService, private fb: FormBuilder, private router: Router, private http: HttpClient) { };
 
   loginFg = this.fb.group({
     emailctrl: ['', [Validators.email, Validators.required]],
@@ -36,6 +36,9 @@ export class LoginComponent {
       email: this.EmailCtrl.value,
       password: this.PasswordCtrl.value
     }
+    this.registerS.userSingin(userlogin);
+  };
+  };
 
     // this.service.loginUser(userlogin).subscribe(
     //   {
@@ -46,12 +49,10 @@ export class LoginComponent {
     //     }
     //   });
 
-    this.http.post<register>("http://localhost:5000/api/Register/login" , userlogin).subscribe({
-    next: res => {
-      this.globLogin = res;
-      this.router.navigateByUrl('');
-      this.globShow = res;
-    }
-    });
-  };
-};
+    // this.http.post<register>("http://localhost:5000/api/Register/login" , userlogin).subscribe({
+    // next: res => {
+    //   this.globLogin = res;
+    //   this.router.navigateByUrl('');
+    //   this.globShow = res;
+    // }
+    // });

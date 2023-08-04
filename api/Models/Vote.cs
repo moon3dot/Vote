@@ -1,28 +1,26 @@
+
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-
-namespace api.Models;
-
-
 
 public record Vote(
     [property: BsonId, BsonRepresentation(BsonType.ObjectId)]
     string? Id,
-    EnumDay? Saturday,
-    EnumTime? SaturdayTime,
-    EnumDay? Sunday,
-    EnumTime? SundayTime,
-    EnumDay? Monday,
-    EnumTime? MondayTime,
-    EnumDay? Tuesday,
-    EnumTime? TuesdayTime,
-    EnumDay? Wednesday,
-    EnumTime? WednesdayTime,
-    EnumDay? Thursday,
-    EnumTime? ThursdayTime,
-    EnumDay? Friday,
-    EnumTime? FridayTime
+    string? Saturday,
+    Time? SaturdayTime,
+    string? Sunday,
+    Time? SundayTime,
+    string? Monday,
+    Time? MondayTime,
+    string? Tuesday,
+    Time? TuesdayTime,
+    string? Wednesday,
+    Time? WednesdayTime,
+    string? Thursday,
+    Time? ThursdayTime,
+    string? Friday,
+    Time? FridayTime
 );
+
 public enum EnumDay
 {
     Saturday,
