@@ -15,11 +15,4 @@ public record Register
     [MaxLength(30 , ErrorMessage ="must leter 30 Character") , MinLength(8 , ErrorMessage ="must more 8 Character")]
     string? ConfirmPass,
     bool? IsAdmin
-)
-
-{
-    internal static object Select(Func<object, object> value)
-    {
-        throw new NotImplementedException();
-    }
-}
+);

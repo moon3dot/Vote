@@ -4,8 +4,6 @@ using MongoDB.Driver;
 
 namespace api.Controllers;
 
-
-
 [ApiController]
 [Route("api/[controller]")]
 public class RegisterController : ControllerBase
@@ -56,10 +54,6 @@ public class RegisterController : ControllerBase
             return Unauthorized("Email or password is not correct");
 
         return user;
-
     }
-
     #endregion
 }
-
-
