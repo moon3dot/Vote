@@ -9,7 +9,7 @@
             <mat-menu #menu="matMenu">
                 <button routerLink="profile" mat-menu-item>Profile</button>
                 <button mat-menu-item>Vote</button>
-                <button mat-menu-item>Logout</button>
+                <button (click)="logout()" mat-menu-item>Logout</button>
             </mat-menu>
         </div>
     </section>

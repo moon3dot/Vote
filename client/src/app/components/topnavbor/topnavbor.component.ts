@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-topnavbor',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./topnavbor.component.scss']
 })
 export class TopnavborComponent {
+constructor(private rout :Router){}
 
+  logout(){
+    localStorage.removeItem('');
+    this.rout.navigateByUrl('login');
+  }
 }
