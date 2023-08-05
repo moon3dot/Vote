@@ -29,14 +29,14 @@ public class VoteController : ControllerBase
             Saturday: newVote.Saturday,
             SaturdayTime: new Time
             (
-                Prd10To14: newVote.SaturdayTime.Prd10To14,
-                Prd11To15: newVote.SaturdayTime.Prd11To15,
-                Prd12To16: newVote.SaturdayTime.Prd12To16,
-                Prd13To17: newVote.SaturdayTime.Prd13To17,
-                Prd14To18: newVote.SaturdayTime.Prd14To18,
-                Prd15To19: newVote.SaturdayTime.Prd15To19,
-                Prd16To20: newVote.SaturdayTime.Prd16To20,
-                Prd17To21: newVote.SaturdayTime.Prd17To21
+                Prd10To14: newVote.SaturdayTime?.Prd10To14,
+                Prd11To15: newVote.SaturdayTime?.Prd11To15,
+                Prd12To16: newVote.SaturdayTime?.Prd12To16,
+                Prd13To17: newVote.SaturdayTime?.Prd13To17,
+                Prd14To18: newVote.SaturdayTime?.Prd14To18,
+                Prd15To19: newVote.SaturdayTime?.Prd15To19,
+                Prd16To20: newVote.SaturdayTime?.Prd16To20,
+                Prd17To21: newVote.SaturdayTime?.Prd17To21
             ),
             Sunday: newVote.Sunday,
             SundayTime: new Time
