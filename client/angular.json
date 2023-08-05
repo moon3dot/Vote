@@ -30,7 +30,6 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -94,7 +93,6 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -102,8 +100,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "768f444b-0170-44b3-b5ce-ae00757855d2"
   }
 }
