@@ -54,7 +54,8 @@ export class RegisterComponent {
       password: this.PasswordCtrl.value,
       confirmPass: this.ConfirmPassCtrl.value
     }
-    this.registerS.userSingUp(userRegister)
+    this.registerS.userSingUp(userRegister);
+    this.router.navigate([''])
   }
 }
 

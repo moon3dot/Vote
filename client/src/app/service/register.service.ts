@@ -10,16 +10,15 @@ import { register } from '../models/registeer.model';
 export class RegisterService {
   apiUrl = "http://localhost:5000/api/Register/register";
   isUserLogin = new BehaviorSubject<boolean>(false);
-  constructor(private http: HttpClient ,private router:Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
-  userSingUp<register>(data:register){
-    this.http.post<register>(this.apiUrl , data,{observe:'response'}).subscribe(
-      (result) =>
-      {
-        if(result){
+  userSingUp<register>(data: register) {
+    this.http.post<register>(this.apiUrl, data, { observe: 'response' }).subscribe(
+      (result) => {
+        if (result) {
           this.isUserLogin.next(true)
           localStorage.setItem('user', JSON.stringify(result))
-          this.router.navigateByUrl('/');
+          this.router.navigate(['', 'home']);
         }
       })
   }

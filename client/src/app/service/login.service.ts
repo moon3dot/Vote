@@ -19,7 +19,7 @@ export class LoginService {
         if(result){
           this.isUserLogin.next(true)
           localStorage.setItem('user', JSON.stringify(result))
-          this.router.navigateByUrl('home');
+          this.router.navigate(['','home']);
         }
       })
   }
