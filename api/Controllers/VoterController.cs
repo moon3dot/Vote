@@ -21,6 +21,8 @@ public class VoterController : ControllerBase
     public async Task<ActionResult<Voter>> Create([FromBody] Voter UserInput)
     {
 
-        bool hasDoc = _collection.AsQueryabale().where<Voter>(doc => doc.Email  == UserInput.Email).Any();
+        bool hasDoc = _collection.AsQueryabale().where<Voter>(doc => doc.Email == UserInput.Email).Any();
+
+        return Ok();
     }
 }
