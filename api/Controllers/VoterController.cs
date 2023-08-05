@@ -9,7 +9,7 @@ namespace api.Controllers;
 [Route("api/[controller]")]
 public class VoterController : ControllerBase
 {
-        private readonly IMongoCollection<Voter> _collection;
+    private readonly IMongoCollection<Voter> _collection;
     // Dependency Injection
     public VoterController(IMongoClient client, IMongoDbSettings dbSettings)
     {
@@ -17,5 +17,10 @@ public class VoterController : ControllerBase
         _collection = dbName.GetCollection<Voter>("Voter");
     }
 
-    [HttpPost]
+    [HttpPost("singup")]
+    public async Task<ActionResult<Voter>> Creat([FromBody] Voter userInput)
+    {
+        bool hasDoc = _collection.AsQueryable().Where<Voter>(doc => doc.Email == userInput.Email).Any();
+    }
+
 }
