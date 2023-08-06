@@ -1,6 +1,7 @@
 using api.Models;
 using api.Settings;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace api.Controllers;
@@ -17,6 +18,7 @@ public class VoterController : ControllerBase
         _collection = dbName.GetCollection<Voter>("Voter");
     }
 
+    #region singup
     [HttpPost("singup")]
     public async Task<ActionResult<Voter>> Creat([FromBody] Voter userInput)
     {
@@ -34,6 +36,32 @@ public class VoterController : ControllerBase
         await _collection.InsertOneAsync(new_Voter);
 
         return new_Voter;
+    }
+    #endregion
+
+    #region  sing IN
+    [HttpGet("email/{userinput}")]
+    public ActionResult<Voter> GetByEmail(string userInput)
+    {
+        Voter isvoter = _collection.Find<Voter>
+            (doc => doc.Email == userInput.ToLower().Trim()).FirstOrDefault();
+
+        if(isvoter is null)
+            return Unauthorized("No user with this email");
+
+        return isvoter;    
+    }
+    #endregion
+
+    [HttpGet("get-all")]
+    public ActionResult<IEnumerable<Voter>> GetAll()
+    {
+        List<Voter> voters = _collection.Find<Voter>(new BsonDocument()).ToList();
+
+        if (!voters.Any())
+            return NoContent();
+
+        return voters;
     }
 
 }
