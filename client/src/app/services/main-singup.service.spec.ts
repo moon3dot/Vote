@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MainSungupService } from './main-sungup.service';
+import { MainSingupService } from './main-singup.service';
 
-describe('MainSungupService', () => {
-  let service: MainSungupService;
+describe('MainSingupService', () => {
+  let service: MainSingupService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MainSungupService);
+    service = TestBed.inject(MainSingupService);
   });
 
   it('should be created', () => {
