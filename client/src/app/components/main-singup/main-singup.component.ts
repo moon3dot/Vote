@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { Voter } from 'src/app/Models/Voter.model';
+import { voter } from 'src/app/Models/voter.model';
+import { MainSingupService } from 'src/app/services/main-singup.service';
+
+
 
 @Component({
   selector: 'app-main-singup',
@@ -9,7 +12,7 @@ import { Voter } from 'src/app/Models/Voter.model';
 })
 export class MainSingupComponent {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,private service:MainSingupService) { }
 
   singupFg = this.fb.group({
     nameCtrl: ['', [Validators.required, Validators.min(3), Validators.max(25)]],
@@ -25,11 +28,12 @@ export class MainSingupComponent {
 
   submitfg(): void {
 
-    let userdata: Voter = {
+    let userdata: voter = {
       name: this.NameCtrl.value,
       email: this.EmailCtrl.value
     }
     console.log(userdata);
+    this.service.userRegister(userdata);
   }
 
 }

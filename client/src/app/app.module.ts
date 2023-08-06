@@ -15,15 +15,19 @@ import { FormsModule } from "@angular/forms"
 import { ReactiveFormsModule } from '@angular/forms'
 
 // Material
-
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+//
+import { HttpClientModule } from '@angular/common/http';
+import { AllVoterComponent } from './components/all-voter/all-voter.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    MainSingupComponent
+    MainSingupComponent,
+    AllVoterComponent
 
   ],
   imports: [
@@ -39,7 +43,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatCheckboxModule,
     MatSelectModule,
     MatToolbarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    //
+    HttpClientModule
 
   ],
   providers: [],
