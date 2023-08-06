@@ -19,9 +19,9 @@ main {
 
             border-radius: 1rem;
 
-            max-width: 20rem;
-            min-width: 20rem;
-            max-height: 10rem;
+            max-width: 60rem;
+            min-width: 30rem;
+            max-height: 60rem;
             min-height: 10rem;
 
             display: flex;
@@ -30,21 +30,39 @@ main {
             justify-content: center;
 
             form {
+                max-width: 50rem;
+                min-width: 20rem;
+                max-height: 50rem;
+                min-height: 10rem;
                 display: flex;
                 flex-direction: column;
                 line-height: 2.5rem;
 
-                input{
-                    padding: 12px;
-                    margin: 8px 0;
-                    border: none;
-                    border-bottom: 2px solid red;
-                }
 
-                label{
+                mat-label{
                     color: white;
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                 }
+                mat-hint{
+                    color: white;
+                    font-size: 0.7rem;  
+                }
+            }
+            button{
+                padding: 1rem;
+                margin-top: 1rem;
+
+                color: rgb(255, 255, 255);
+                text-shadow: 1px 0.5px rgb(165, 165, 165);
+                width: 100%;
+                background-color: rgba(240, 248, 255, 0);
+                border: none;
+                font-size: 1rem;
+            }
+            button:hover{
+                color: aliceblue;
+                font-size: 1.5rem;
+                transition: 200ms;
             }
         }
     }

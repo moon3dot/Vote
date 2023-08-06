@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-singup.component.scss']
 })
 export class MainSingupComponent {
+  
+  constructor() { }
 
+  singupfg vore
 }

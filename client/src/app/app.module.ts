@@ -5,6 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainSingupComponent } from './components/main-singup/main-singup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// add material 
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input'
 
 @NgModule({
   declarations: [
@@ -14,7 +19,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    // add mateliral
+    MatIconModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

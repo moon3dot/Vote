@@ -1,13 +1,21 @@
 <main>
     <section>
         <div>
-            <form>
+        <form [formGroup]="singupFg">
                 <h2>register</h2>
-                <mat-label></mat-label>
-                <label>name</label>
-                <input type="name" matInput>
-                <label>Email</label>
-                <input type="email">
+                <mat-form-field>
+                    <mat-label>Full name</mat-label>
+                    <input type="text" placeholder="Mehran Rezaeian" matInput>
+                    <mat-hint>Like for example Mehran Rezaeian</mat-hint>
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Your Email</mat-label>
+                    <input type="email" placeholder="example moon3dot@gmail.com" matInput>
+                    <mat-hint>Like for example moon3dot@gmail.com</mat-hint>
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+
             </form>
             <button type="submit">singup</button>
         </div>
