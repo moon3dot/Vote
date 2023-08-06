@@ -7,14 +7,24 @@ import { MainSingupComponent } from './components/main-singup/main-singup.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // add material 
 import {MatIconModule} from '@angular/material/icon';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input'
+//form
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from "@angular/forms"
+import{ ReactiveFormsModule} from '@angular/forms'
+
+// Material
+
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainSingupComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -24,7 +34,12 @@ import {MatInputModule} from '@angular/material/input'
     MatIconModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatToolbarModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

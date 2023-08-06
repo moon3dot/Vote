@@ -1,5 +1,4 @@
-export interface Voter{
-    []
-    name :string,
-    email : string
+export interface Voter {
+    name: string,
+    email: string
 };

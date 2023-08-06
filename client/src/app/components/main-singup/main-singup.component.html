@@ -5,19 +5,19 @@
                 <h2>register</h2>
                 <mat-form-field>
                     <mat-label>Full name</mat-label>
-                    <input type="text" placeholder="Mehran Rezaeian" matInput>
+                    <input type="text" placeholder="Mehran Rezaeian" formControlName="nameCtrl" matInput>
                     <mat-hint>Like for example Mehran Rezaeian</mat-hint>
                     <mat-error>This field is required.</mat-error>
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Your Email</mat-label>
-                    <input type="email" placeholder="example moon3dot@gmail.com" matInput>
+                    <input type="email" placeholder="example moon3dot@gmail.com" formControlName="emailCtrl" matInput>
                     <mat-hint>Like for example moon3dot@gmail.com</mat-hint>
                     <mat-error>This field is required.</mat-error>
                 </mat-form-field>
 
             </form>
-            <button type="submit">singup</button>
+            <button (click)="submitfg()">singup</button>
         </div>
     </section>
 </main>
