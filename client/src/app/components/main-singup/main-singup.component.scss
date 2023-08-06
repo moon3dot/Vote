@@ -34,6 +34,13 @@ main {
                 flex-direction: column;
                 line-height: 2.5rem;
 
+                input{
+                    padding: 12px;
+                    margin: 8px 0;
+                    border: none;
+                    border-bottom: 2px solid red;
+                }
+
                 label{
                     color: white;
                     font-size: 1.5rem;
