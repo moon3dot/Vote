@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { MainSingupComponent } from './components/main-singup/main-singup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // add material 
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input'
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input'
 //form
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from "@angular/forms"
-import{ ReactiveFormsModule} from '@angular/forms'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from "@angular/forms"
+import { ReactiveFormsModule } from '@angular/forms'
 
 // Material
 
@@ -24,7 +24,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   declarations: [
     AppComponent,
     MainSingupComponent
-    
+
   ],
   imports: [
     BrowserModule,

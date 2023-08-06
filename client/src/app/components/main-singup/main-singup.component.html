@@ -1,7 +1,7 @@
 <main>
     <section>
         <div>
-        <form [formGroup]="singupFg" (ngSubmit)="submitfg()">
+            <form [formGroup]="singupFg" (ngSubmit)="submitfg()">
                 <h2>register</h2>
                 <mat-form-field>
                     <mat-label>Full name</mat-label>
@@ -16,7 +16,7 @@
                     <mat-error>This field is required.</mat-error>
                 </mat-form-field>
 
-                <button  mat-raised-button color="primary" [disabled]="singupFg.invalid">Register</button>
+                <button mat-raised-button color="primary" [disabled]="singupFg.invalid">Register</button>
             </form>
         </div>
     </section>
