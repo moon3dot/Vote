@@ -1,0 +1,15 @@
+<main>
+    <section>
+        <h2>voters</h2>
+        <table *ngIf="voters">
+            <tr *ngFor="let voter of voters ; let i = index" >
+                <td>{{i+1}}</td>
+                <td>Name Voter: {{voter.name}}</td>
+                <td>Email Voter: {{voter.email}}</td>
+            </tr>
+        </table>
+        <div>
+            <!-- <button (click)="showVotes()" mat-raised-button>Show voters</button> -->
+        </div>
+    </section>
+</main>

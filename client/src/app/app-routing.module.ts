@@ -5,7 +5,7 @@ import { AllVoterComponent } from './components/all-voter/all-voter.component';
 
 const routes: Routes = [
   { path: "singup", component: MainSingupComponent },
-  { path: "Voters", component: AllVoterComponent },
+  { path: "voters", component: AllVoterComponent },
 
 ];
 
