@@ -40,16 +40,15 @@ public class VoterController : ControllerBase
     #endregion
 
     #region  sing IN
-    [HttpGet("email/{userinput}")]
-    public ActionResult<Voter> GetByEmail(string userInput)
+    [HttpPost("login")]
+    public async Task<ActionResult<Voter>> loginUser([FromBody] Voter userInput)
     {
-        Voter isvoter = _collection.Find<Voter>
-            (doc => doc.Email == userInput.ToLower().Trim()).FirstOrDefault();
+        Voter login = await _collection.Find<Voter>(u => u.Email == userInput.Email).FirstOrDefaultAsync();
 
-        if(isvoter is null)
-            return Unauthorized("No user with this email");
+        if (login is null)
+            return Unauthorized("Email is not correct");
 
-        return isvoter;    
+        return login;    
     }
     #endregion
 

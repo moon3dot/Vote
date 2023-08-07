@@ -22,12 +22,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 //
 import { HttpClientModule } from '@angular/common/http';
 import { AllVoterComponent } from './components/all-voter/all-voter.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainSingupComponent,
-    AllVoterComponent
+    AllVoterComponent,
+    LoginComponent
 
   ],
   imports: [

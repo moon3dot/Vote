@@ -10,7 +10,9 @@ import { voter } from '../Models/voter.model';
 })
 export class MainSingupService {
   public apiUrl = "http://localhost:5000/api/voter/singup";
-  isUserLogin = new BehaviorSubject<boolean>(false);
+
+  public isUserLogin = new BehaviorSubject<boolean>(false);
+
   constructor(private http: HttpClient, private reout: Router) { }
 
   userRegister(userDate: voter) {

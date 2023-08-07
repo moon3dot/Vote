@@ -1,0 +1,16 @@
+<main>
+    <section>
+        <h2>login</h2>
+        <div>
+            <form [formGroup]="login" (ngSubmit)="btnLogin()">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput placeholder="example moon3dot@gmail.com" formControlName="emailCtrl">
+                    <mat-hint>Like for example moon3dot@gmail.com</mat-hint>
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <button type="submit" mat-raised-button>Login</button>
+            </form>
+        </div>
+    </section>
+</main>
