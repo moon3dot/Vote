@@ -48,7 +48,7 @@ public class VoterController : ControllerBase
         if (login is null)
             return Unauthorized("Email is not correct");
 
-        return login;    
+        return login;
     }
     #endregion
 
