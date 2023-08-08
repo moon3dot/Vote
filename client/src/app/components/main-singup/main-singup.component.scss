@@ -6,7 +6,7 @@ main {
     background-color: rgba(32, 32, 32, 1);
 
     min-width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 10vh);
 
     display: flex;
     justify-content: center;

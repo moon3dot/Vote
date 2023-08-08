@@ -1,15 +1,15 @@
 <main>
     <section>
         <div>
-            <h2>Login</h2>
-            <form [formGroup]="login" (ngSubmit)="btnLogin()">
+            <h2>ورود</h2>
+            <form [formGroup]="loginFg" (ngSubmit)="btnLogin()">
                 <mat-form-field>
-                    <mat-label>Email</mat-label>
-                    <input type="email" matInput placeholder="example moon3dot@gmail.com" formControlName="emailCtrl">
-                    <mat-hint>Like for example moon3dot@gmail.com</mat-hint>
-                    <mat-error>This field is required.</mat-error>
+                    <mat-label>ایمیل</mat-label>
+                    <input type="email" matInput placeholder="مانند مثال moon3dot@gmail.com" formControlName="emailCtrl">
+                    <mat-hint>مانند مثال moon3dot@gmail.com</mat-hint>
+                    <mat-error>این فیلد اجباری است</mat-error>
                 </mat-form-field>
-                <button type="submit" mat-raised-button>Login</button>
+                <button type="submit" mat-raised-button [disabled]="loginFg.invalid">ورود</button>
             </form>
         </div>
     </section>

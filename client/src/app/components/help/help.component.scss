@@ -1,0 +1,26 @@
+main {
+    background-color: rgba(32, 32, 32, 1);
+    color: white;
+    min-width: 100vh;
+    min-height: calc(100vh - 10vh);
+
+    section {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+
+        div {
+            margin-top: 1rem;
+            background-color: rgba(79, 79, 79, 0.416);
+            min-width: 65rem;
+            max-width: 65rem;
+            min-height: 70vh;
+            border-radius: 1rem;
+
+            display: flex;
+            justify-content: center;
+
+            padding-top:1rem ;
+        }
+    }
+}

@@ -15,12 +15,12 @@ export class LoginComponent {
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
-  login = this.fb.group({
+  loginFg = this.fb.group({
     emailCtrl: ['', [Validators.required, Validators.email]]
   })
 
   get EmailCtrl(): FormControl {
-    return this.login.get('emailCtrl') as FormControl
+    return this.loginFg.get('emailCtrl') as FormControl
   }
 
   btnLogin() {

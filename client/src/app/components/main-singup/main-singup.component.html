@@ -2,21 +2,21 @@
     <section>
         <div>
             <form [formGroup]="singupFg" (ngSubmit)="submitfg()">
-                <h2>register</h2>
+                <h2>ثبت نام</h2>
                 <mat-form-field>
-                    <mat-label>Full name</mat-label>
-                    <input type="text" placeholder="Mehran Rezaeian" formControlName="nameCtrl" matInput>
-                    <mat-hint>Like for example Mehran Rezaeian</mat-hint>
-                    <mat-error>This field is required.</mat-error>
+                    <mat-label>نام کامل </mat-label>
+                    <input type="text" placeholder="مانند مثال Mehran Rezaeian" formControlName="nameCtrl" matInput>
+                    <mat-hint>مانند مثال Mehran Rezaeian</mat-hint>
+                    <mat-error>این فیلد اجباری است</mat-error>
                 </mat-form-field>
                 <mat-form-field>
-                    <mat-label>Your Email</mat-label>
-                    <input type="email" placeholder="example moon3dot@gmail.com" formControlName="emailCtrl" matInput>
-                    <mat-hint>Like for example moon3dot@gmail.com</mat-hint>
-                    <mat-error>This field is required.</mat-error>
+                    <mat-label>ایمیل</mat-label>
+                    <input type="email" placeholder="مانند مثال@gmail.com" formControlName="emailCtrl" matInput>
+                    <mat-hint>مانند مثال@gmail.com</mat-hint>
+                    <mat-error>این فیلد اجباری است.</mat-error>
                 </mat-form-field>
 
-                <button mat-raised-button color="primary" [disabled]="singupFg.invalid">Register</button>
+                <button mat-raised-button color="primary" [disabled]="singupFg.invalid">ثبت نام</button>
             </form>
         </div>
     </section>

@@ -1,4 +1,4 @@
 export interface voter {
-    name: string,
+    name?: string,
     email: string
 };
