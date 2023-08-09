@@ -18,13 +18,13 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
 //
 import { HttpClientModule } from '@angular/common/http';
 import { AllVoterComponent } from './components/all-voter/all-voter.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HelpComponent } from './components/help/help.component';
+import { VoteComponent } from './components/vote/vote.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { HelpComponent } from './components/help/help.component';
     AllVoterComponent,
     LoginComponent,
     HeaderComponent,
-    HelpComponent
+    HelpComponent,
+    VoteComponent
 
   ],
   imports: [

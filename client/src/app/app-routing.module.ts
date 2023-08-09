@@ -5,12 +5,16 @@ import { AllVoterComponent } from './components/all-voter/all-voter.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HelpComponent } from './components/help/help.component';
+import { VoteComponent } from './components/vote/vote.component';
 
 const routes: Routes = [
   { path: "singup", component: MainSingupComponent },
   { path: "voters", component: AllVoterComponent },
   { path: "login", component: LoginComponent },
-  { path: "help", component: HelpComponent }
+  { path: "help", component: HelpComponent },
+  { path: "", component: VoteComponent },
+  { path: "home", component: VoteComponent },
+  { path: "vote", component: VoteComponent }
 
 ];
 
