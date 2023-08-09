@@ -33,3 +33,14 @@ public record Time(
     bool? Prd16To20,
     bool? Prd17To21
 );
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
