@@ -8,19 +8,19 @@ public record Vote(
     string? Id,
     string? VoterId,
     bool? Saturday,
-    Time? SaturdayTime
-    // Enum? Sunday,
-    // Time? SundayTime,
-    // Enum? Monday,
-    // Time? MondayTime,
-    // Enum? Tuesday,
-    // Time? TuesdayTime,
-    // Enum? Wednesday,
-    // Time? WednesdayTime,
-    // Enum? Thursday,
-    // Time? ThursdayTime,
-    // Enum? Friday,
-    // Time? FridayTime
+    Time? SaturdayTime,
+    bool? Sunday,
+    Time? SundayTime,
+    bool? Monday,
+    Time? MondayTime,
+    bool? Tuesday,
+    Time? TuesdayTime,
+    bool? Wednesday,
+    Time? WednesdayTime,
+    bool? Thursday,
+    Time? ThursdayTime,
+    bool? Friday,
+    Time? FridayTime
 );
 
 public record Time(
