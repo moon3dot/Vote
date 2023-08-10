@@ -16,7 +16,7 @@ public class VoteController : ControllerBase
     public VoteController(IMongoClient client, IMongoDbSettings dbSettings)
     {
         var dbName = client.GetDatabase(dbSettings.DatabaseName);
-        _collection = dbName.GetCollection<Vote>("Vote");
+        _collection = dbName.GetCollection<Vote>("vote");
     }
     #endregion
 
@@ -131,6 +131,8 @@ public class VoteController : ControllerBase
         if (!votes.Any())
             return NoContent();
 
+        long count = _collection.CountDocuments(new BsonDocument());
+         
         return votes;
     }
 

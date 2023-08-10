@@ -26,6 +26,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HelpComponent } from './components/help/help.component';
 import { VoteComponent } from './components/vote/vote.component';
 import { AllVoteComponent } from './components/all-vote/all-vote.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { AllVoteComponent } from './components/all-vote/all-vote.component';
     MatToolbarModule,
     ReactiveFormsModule,
     //
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule
 
   ],
   providers: [],

@@ -15,7 +15,7 @@ public class VoterController : ControllerBase
     public VoterController(IMongoClient client, IMongoDbSettings dbSettings)
     {
         var dbName = client.GetDatabase(dbSettings.DatabaseName);
-        _collection = dbName.GetCollection<Voter>("Voter");
+        _collection = dbName.GetCollection<Voter>("voter");
     }
 
     #region singup

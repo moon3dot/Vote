@@ -1,10 +1,14 @@
 <main>
     <section>
         <div>
-            <button class="btnLoguot" mat-button>خروج</button>
-            <button class="btnHelp" mat-button  routerLink="help">کمک</button>
-            <h2 class="titel">Time Class</h2>
-            <button class="btnProfile" mat-button>پروفایل</button>
+            <button class="btnLoguot" routerLink="login" mat-button>ورود</button>
+            <button class="btnHelp" mat-button routerLink="help">کمک</button>
+            <h2 class="titel" routerLink="">Time Class</h2>
+            <button class="btnProfile" mat-button [matMenuTriggerFor]="menu">پروفایل</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="voters">رای دهندگان</button>
+                <button mat-menu-item routerLink="show-vote">رای ها</button>
+            </mat-menu>
         </div>
     </section>
 </main>

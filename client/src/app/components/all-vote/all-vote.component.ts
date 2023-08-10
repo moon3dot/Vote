@@ -11,7 +11,7 @@ import { VotersService } from 'src/app/services/voters.service';
 export class AllVoteComponent {
   public votes: vote[] | undefined;
   public apiUrl = "http://localhost:5000/api/vote/get-all";
-
+  public count = 0;
   constructor(private http: HttpClient) {
 
     this.showVotes()
@@ -23,5 +23,11 @@ export class AllVoteComponent {
       next: respose => this.votes = respose
     });
 
+    this.votes?.forEach( votes => {
+      if( votes.saturday = true)
+      {
+        this.count ++;
+      }
+    })
   }
 }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { voter } from '../Models/voter.model';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,8 @@ export class VotersService {
     this.http.get<voter[]>(this.apiUrl).subscribe({
       next: respose => this.voters = respose
     });
+
+    }
   }
-}
+
 
