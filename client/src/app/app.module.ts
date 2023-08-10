@@ -25,6 +25,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HelpComponent } from './components/help/help.component';
 import { VoteComponent } from './components/vote/vote.component';
+import { AllVoteComponent } from './components/all-vote/all-vote.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { VoteComponent } from './components/vote/vote.component';
     LoginComponent,
     HeaderComponent,
     HelpComponent,
-    VoteComponent
+    VoteComponent,
+    AllVoteComponent
 
   ],
   imports: [

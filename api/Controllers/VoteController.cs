@@ -1,6 +1,7 @@
 using api.Models;
 using api.Settings;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace api.Controllers;
@@ -22,7 +23,7 @@ public class VoteController : ControllerBase
     #region  post vote
 
     [HttpPost("Vote")]
-    public async Task<ActionResult<Vote>> Vote([FromBody] Vote userInput)
+    public async Task<ActionResult<Vote>> Vote(Vote userInput)
     {
 
         Vote vote = new Vote(
@@ -117,6 +118,20 @@ public class VoteController : ControllerBase
 
         return vote;
 
+    }
+
+    #endregion
+    
+    #region  get all
+    [HttpGet("get-all")]
+    public ActionResult<IEnumerable<Vote>> GetAll()
+    {
+        List<Vote> votes = _collection.Find<Vote>(new BsonDocument()).ToList();
+
+        if (!votes.Any())
+            return NoContent();
+
+        return votes;
     }
 
     #endregion

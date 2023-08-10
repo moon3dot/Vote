@@ -1,0 +1,45 @@
+main {
+    background-image: url(/assets/Group\ 27.svg);
+    min-width: 100vh;
+    min-height: 100vh;
+    direction: rtl;
+    section {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 1rem;
+        color: aliceblue;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 2rem;
+        border: 0.3rem solid orangered;
+
+        h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 1rem;
+            font-weight: 900;
+            color: orangered;
+        }
+
+        table {
+            td {
+                border:  0.2rem solid orangered;
+                margin: 3rem;
+                padding: 1rem;
+                
+                tr {
+                 border-bottom: 0.2rem solid orangered;
+                }
+
+            }
+        }
+
+        div {
+            button {
+                margin-top: 1rem;
+                background-color: orangered;
+            }
+        }
+    }
+}
