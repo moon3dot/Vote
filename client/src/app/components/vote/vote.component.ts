@@ -307,82 +307,83 @@ export class VoteComponent {
   voteSubmit(): void {
 
     let voteData: vote = {
-      saturday: this.SaturdayCtrl.value,
+
+      saturday: this.SaturdayCtrl.value || false,
       saturdayTime: {
-        prd10To14: this.Saturday10To14Ctrl.value,
-        prd11To15: this.Saturday11To15Ctrl.value,
-        prd12To16: this.Saturday12To16Ctrl.value,
-        prd13To17: this.Saturday13To17Ctrl.value,
-        prd14To18: this.Saturday14To18Ctrl.value,
-        prd15To19: this.Saturday15To19Ctrl.value,
-        prd16To20: this.Saturday16To20Ctrl.value,
-        prd17To21: this.Saturday17To21Ctrl.value
+        prd10To14: this.Saturday10To14Ctrl.value || false,
+        prd11To15: this.Saturday11To15Ctrl.value || false,
+        prd12To16: this.Saturday12To16Ctrl.value || false,
+        prd13To17: this.Saturday13To17Ctrl.value || false,
+        prd14To18: this.Saturday14To18Ctrl.value || false,
+        prd15To19: this.Saturday15To19Ctrl.value || false,
+        prd16To20: this.Saturday16To20Ctrl.value || false,
+        prd17To21: this.Saturday17To21Ctrl.value || false
       },
-      sunday: this.SundayCtrl.value,
+      sunday: this.SundayCtrl.value || false,
       sundayTime: {
-        prd10To14: this.Sunday10To14Ctrl.value,
-        prd11To15: this.Sunday11To15Ctrl.value,
-        prd12To16: this.Sunday12To16Ctrl.value,
-        prd13To17: this.Sunday13To17Ctrl.value,
-        prd14To18: this.Sunday14To18Ctrl.value,
-        prd15To19: this.Sunday15To19Ctrl.value,
-        prd16To20: this.Sunday16To20Ctrl.value,
-        prd17To21: this.Sunday17To21Ctrl.value
+        prd10To14: this.Sunday10To14Ctrl.value || false,
+        prd11To15: this.Sunday11To15Ctrl.value || false,
+        prd12To16: this.Sunday12To16Ctrl.value || false,
+        prd13To17: this.Sunday13To17Ctrl.value || false,
+        prd14To18: this.Sunday14To18Ctrl.value || false,
+        prd15To19: this.Sunday15To19Ctrl.value || false,
+        prd16To20: this.Sunday16To20Ctrl.value || false,
+        prd17To21: this.Sunday17To21Ctrl.value || false
       },
-      monday: this.MondayCtrl.value,
+      monday: this.MondayCtrl.value || false,
       mondayTime: {
-        prd10To14: this.Monday10To14Ctrl.value,
-        prd11To15: this.Monday11To15Ctrl.value,
-        prd12To16: this.Monday12To16Ctrl.value,
-        prd13To17: this.Monday13To17Ctrl.value,
-        prd14To18: this.Monday14To18Ctrl.value,
-        prd15To19: this.Monday15To19Ctrl.value,
-        prd16To20: this.Monday16To20Ctrl.value,
-        prd17To21: this.Monday17To21Ctrl.value
+        prd10To14: this.Monday10To14Ctrl.value || false,
+        prd11To15: this.Monday11To15Ctrl.value || false,
+        prd12To16: this.Monday12To16Ctrl.value || false,
+        prd13To17: this.Monday13To17Ctrl.value || false,
+        prd14To18: this.Monday14To18Ctrl.value || false,
+        prd15To19: this.Monday15To19Ctrl.value || false,
+        prd16To20: this.Monday16To20Ctrl.value || false,
+        prd17To21: this.Monday17To21Ctrl.value || false
       },
-      tuesday: this.ThursdayCtrl.value,
+      tuesday: this.ThursdayCtrl.value || false,
       tuesdayTime: {
-        prd10To14: this.Tuesday10To14Ctrl.value,
-        prd11To15: this.Tuesday11To15Ctrl.value,
-        prd12To16: this.Tuesday12To16Ctrl.value,
-        prd13To17: this.Tuesday13To17Ctrl.value,
-        prd14To18: this.Tuesday14To18Ctrl.value,
-        prd15To19: this.Tuesday15To19Ctrl.value,
-        prd16To20: this.Tuesday16To20Ctrl.value,
-        prd17To21: this.Tuesday17To21Ctrl.value
+        prd10To14: this.Tuesday10To14Ctrl.value || false,
+        prd11To15: this.Tuesday11To15Ctrl.value || false,
+        prd12To16: this.Tuesday12To16Ctrl.value || false,
+        prd13To17: this.Tuesday13To17Ctrl.value || false,
+        prd14To18: this.Tuesday14To18Ctrl.value || false,
+        prd15To19: this.Tuesday15To19Ctrl.value || false,
+        prd16To20: this.Tuesday16To20Ctrl.value || false,
+        prd17To21: this.Tuesday17To21Ctrl.value || false
       },
-      wednesday: this.WednesdayCtrl.value,
+      wednesday: this.WednesdayCtrl.value || false,
       wednesdayTime: {
-        prd10To14: this.Wednesday10To14Ctrl.value,
-        prd11To15: this.Wednesday11To15Ctrl.value,
-        prd12To16: this.Wednesday12To16Ctrl.value,
-        prd13To17: this.Wednesday13To17Ctrl.value,
-        prd14To18: this.Wednesday14To18Ctrl.value,
-        prd15To19: this.Wednesday15To19Ctrl.value,
-        prd16To20: this.Wednesday16To20Ctrl.value,
-        prd17To21: this.Wednesday17To21Ctrl.value
+        prd10To14: this.Wednesday10To14Ctrl.value || false,
+        prd11To15: this.Wednesday11To15Ctrl.value || false,
+        prd12To16: this.Wednesday12To16Ctrl.value || false,
+        prd13To17: this.Wednesday13To17Ctrl.value || false,
+        prd14To18: this.Wednesday14To18Ctrl.value || false,
+        prd15To19: this.Wednesday15To19Ctrl.value || false,
+        prd16To20: this.Wednesday16To20Ctrl.value || false,
+        prd17To21: this.Wednesday17To21Ctrl.value || false
       },
-      thursday: this.ThursdayCtrl.value,
+      thursday: this.ThursdayCtrl.value || false,
       thursdayTime: {
-        prd10To14: this.Thursday10To14Ctrl.value,
-        prd11To15: this.Thursday11To15Ctrl.value,
-        prd12To16: this.Thursday12To16Ctrl.value,
-        prd13To17: this.Thursday13To17Ctrl.value,
-        prd14To18: this.Thursday14To18Ctrl.value,
-        prd15To19: this.Thursday15To19Ctrl.value,
-        prd16To20: this.Thursday16To20Ctrl.value,
-        prd17To21: this.Thursday17To21Ctrl.value
+        prd10To14: this.Thursday10To14Ctrl.value || false,
+        prd11To15: this.Thursday11To15Ctrl.value || false,
+        prd12To16: this.Thursday12To16Ctrl.value || false,
+        prd13To17: this.Thursday13To17Ctrl.value || false,
+        prd14To18: this.Thursday14To18Ctrl.value || false,
+        prd15To19: this.Thursday15To19Ctrl.value || false,
+        prd16To20: this.Thursday16To20Ctrl.value || false,
+        prd17To21: this.Thursday17To21Ctrl.value || false
       },
-      friday: this.FridayCtrl.value,
+      friday: this.FridayCtrl.value || false,
       fridayTime: {
-        prd10To14: this.Friday10To14Ctrl.value,
-        prd11To15: this.Friday11To15Ctrl.value,
-        prd12To16: this.Friday12To16Ctrl.value,
-        prd13To17: this.Friday13To17Ctrl.value,
-        prd14To18: this.Friday14To18Ctrl.value,
-        prd15To19: this.Friday15To19Ctrl.value,
-        prd16To20: this.Friday16To20Ctrl.value,
-        prd17To21: this.Friday17To21Ctrl.value
+        prd10To14: this.Friday10To14Ctrl.value || false,
+        prd11To15: this.Friday11To15Ctrl.value || false,
+        prd12To16: this.Friday12To16Ctrl.value || false,
+        prd13To17: this.Friday13To17Ctrl.value || false,
+        prd14To18: this.Friday14To18Ctrl.value || false,
+        prd15To19: this.Friday15To19Ctrl.value || false,
+        prd16To20: this.Friday16To20Ctrl.value || false,
+        prd17To21: this.Friday17To21Ctrl.value || false
       }
     }
 
