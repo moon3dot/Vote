@@ -131,8 +131,6 @@ public class VoteController : ControllerBase
         if (!votes.Any())
             return NoContent();
 
-        long count = _collection.CountDocuments(new BsonDocument());
-         
         return votes;
     }
 

@@ -9,11 +9,11 @@ import { VotersService } from 'src/app/services/voters.service';
   styleUrls: ['./all-voter.component.scss']
 })
 export class AllVoterComponent {
-  public voters: voter[] | undefined;
+  voters: voter[] | undefined;
   public apiUrl = "http://localhost:5000/api/voter/get-all";
 
-  constructor(private service: VotersService, private http: HttpClient) {
-
+  constructor(private http: HttpClient) {
+    
     this.showVotes()
   }
 
@@ -22,5 +22,6 @@ export class AllVoterComponent {
     this.http.get<voter[]>(this.apiUrl).subscribe({
       next: respose => this.voters = respose
     });
+    console.log(this.voters)
   }
 }

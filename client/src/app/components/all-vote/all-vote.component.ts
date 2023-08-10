@@ -1,6 +1,8 @@
+import { NgFor } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { vote } from 'src/app/Models/vote.model';
+import { voter } from 'src/app/Models/voter.model';
 import { VotersService } from 'src/app/services/voters.service';
 
 @Component({
@@ -19,15 +21,15 @@ export class AllVoteComponent {
 
   showVotes(): void {
 
-    this.http.get<vote[]>(this.apiUrl,).subscribe({
-      next: respose => this.votes = respose
-    });
-
-    this.votes?.forEach( votes => {
-      if( votes.saturday = true)
-      {
-        this.count ++;
+    this.http.get<vote[]>(this.apiUrl).subscribe({
+      next: respose => {
+        this.votes = respose;
+        for(let i = 0; i< this.votes.length ; i++){
+          if(this.votes)
+        }
+        console.log(this.count);
       }
-    })
+
+    });
   }
 }

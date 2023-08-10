@@ -341,7 +341,7 @@ export class VoteComponent {
         prd16To20: this.Monday16To20Ctrl.value || false,
         prd17To21: this.Monday17To21Ctrl.value || false
       },
-      tuesday: this.ThursdayCtrl.value || false,
+      tuesday: this.TuesdayCtrl.value || false,
       tuesdayTime: {
         prd10To14: this.Tuesday10To14Ctrl.value || false,
         prd11To15: this.Tuesday11To15Ctrl.value || false,
