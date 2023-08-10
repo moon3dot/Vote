@@ -27,7 +27,6 @@ public class VoteController : ControllerBase
 
         Vote vote = new Vote(
             Id: null,
-            VoterId: "null",
             Saturday: userInput.Saturday,
             SaturdayTime: new Time
             (

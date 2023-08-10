@@ -6,7 +6,6 @@ namespace api.Models;
 public record Vote(
     [property: BsonId, BsonRepresentation(BsonType.ObjectId)]
     string? Id,
-    string? VoterId,
     bool? Saturday,
     Time? SaturdayTime,
     bool? Sunday,
