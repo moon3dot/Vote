@@ -8,11 +8,18 @@ import { vote } from 'src/app/Models/vote.model';
   styleUrls: ['./all-vote.component.scss']
 })
 export class AllVoteComponent {
+  //global variable for day and time
   public votes: vote[] | undefined;
   public apiUrl = "http://localhost:5000/api/vote/get-all";
-  public count = 0;
-  //global variable for day and time
 
+  // counter day and time
+  public count = 0;
+  public maxCountDay = 0;
+  public nameMaxCount = "";
+  public maxCountTime = 0;
+  public nameMaxTime = "";
+
+  //for day and time
   //satday
   public satdayCount = 0;
   public satCount10 = 0;
@@ -304,9 +311,60 @@ export class AllVoteComponent {
           if (vote.fridayTime?.prd17To21)
             this.friCount17++
 
+          // max conut day
+          if (this.maxCountDay <= this.satdayCount) {
+            this.maxCountDay = this.satdayCount;
+
+            this.nameMaxCount = "satday";
+
+            // max Count Time
+            if (this.maxCountTime <= this.satCount10) {
+              this.maxCountTime = this.satCount10
+
+              this.nameMaxTime = "10 - 14"
+
+              console.log(this.satCount10)
+            }
+          }
+
+          if (this.maxCountDay <= this.sundayCount) {
+            this.maxCountDay = this.sundayCount
+
+            this.nameMaxCount = "sunday";
+
+          }
+
+          if (this.maxCountDay <= this.mondayCount) {
+            this.maxCountDay = this.mondayCount
+
+            this.nameMaxCount = "monday";
+          }
+
+          if (this.maxCountDay <= this.tuesCount10) {
+            this.maxCountDay = this.tuesCount10
+
+            this.nameMaxCount = "tuesday";
+          }
+
+          if (this.maxCountDay <= this.wedndayCount) {
+            this.maxCountDay = this.wedndayCount
+
+            this.nameMaxCount = "wednday";
+          }
+
+          if (this.maxCountDay <= this.thurdayCount) {
+            this.maxCountDay = this.thurdayCount
+
+            this.nameMaxCount = "thuerday";
+          }
+
+          if (this.maxCountDay <= this.fridayCount) {
+            this.maxCountDay = this.fridayCount
+
+            this.nameMaxCount = "friday";
+          }
         });
       }
-
     });
   }
 }
