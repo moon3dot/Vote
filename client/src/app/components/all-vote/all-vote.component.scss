@@ -2,7 +2,8 @@ main {
     background-image: url(/assets/Group\ 27.svg);
     min-width: 100vh;
     min-height: 100vh;
-    direction: rtl;
+    
+
     section {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -20,26 +21,52 @@ main {
             margin-top: 1rem;
             font-weight: 900;
             color: orangered;
+
+            span {
+                color: aliceblue;
+                border-bottom: 0.2rem solid aliceblue;
+            }
         }
 
-        table {
-            td {
-                border:  0.2rem solid orangered;
-                margin: 3rem;
-                padding: 1rem;
-                
-                tr {
-                 border-bottom: 0.2rem solid orangered;
+        .divDay {
+            max-width: 25rem;
+            min-width: 13rem;
+            max-height: 30rem;
+            min-height: 15rem;
+            border : 0.2rem solid aliceblue;
+            text-align: center;
+
+            span{
+                color: orangered;
+            }
+
+            .day{
+                font-size: 1.5rem;
+                color: orangered;
+                span{
+                    color: aliceblue;
                 }
-
             }
         }
+    }
+    #sectionTwo{
+       margin: 1rem;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+    }
+    #sectionThree{
+        
+       margin: 1rem;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
 
-        div {
-            button {
-                margin-top: 1rem;
-                background-color: orangered;
-            }
-        }
+       div{
+        min-width: 100%;
+        min-height: 1rem;
+        max-height: 5rem;
+        display: flex;
+       }
     }
 }

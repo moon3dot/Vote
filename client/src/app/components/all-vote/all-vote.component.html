@@ -1,191 +1,101 @@
 <main>
     <section>
-        <h2>votes</h2>
-        <table *ngIf="votes">
-            <td>شنبه {{count}}
-                <tr>
-                    ساعت 10 تا 2
-                </tr>
-                <tr>
-                    ساعت 11 تا 3
-                </tr>
-                <tr>
-                    ساعت 12 تا 4
-                </tr>
-                <tr>
-                    ساعت 1 تا 5
-                </tr>
-                <tr>
-                    ساعت 2 تا 6
-                </tr>
-                <tr>
-                    ساعت 3 تا 7
-                </tr>
-                <tr>
-                    ساعت 4 تا 8
-                </tr>
-                <tr>
-                    ساعت 5 تا 9
-                </tr>
-            </td>
-            <td>یکشنبه
-                <tr>
-                    ساعت 10 تا 2
-                </tr>
-                <tr>
-                    ساعت 11 تا 3
-                </tr>
-                <tr>
-                    ساعت 12 تا 4
-                </tr>
-                <tr>
-                    ساعت 1 تا 5
-                </tr>
-                <tr>
-                    ساعت 2 تا 6
-                </tr>
-                <tr>
-                    ساعت 3 تا 7
-                </tr>
-                <tr>
-                    ساعت 4 تا 8
-                </tr>
-                <tr>
-                    ساعت 5 تا 9
-                </tr>
-            </td>
-            <td>دوشنبه
-                <tr>
-                    ساعت 10 تا 2
-                </tr>
-                <tr>
-                    ساعت 11 تا 3
-                </tr>
-                <tr>
-                    ساعت 12 تا 4
-                </tr>
-                <tr>
-                    ساعت 1 تا 5
-                </tr>
-                <tr>
-                    ساعت 2 تا 6
-                </tr>
-                <tr>
-                    ساعت 3 تا 7
-                </tr>
-                <tr>
-                    ساعت 4 تا 8
-                </tr>
-                <tr>
-                    ساعت 5 تا 9
-                </tr>
-            </td>
-            <td>سه شنبه
-                <tr>
-                    ساعت 10 تا 2
-                </tr>
-                <tr>
-                    ساعت 11 تا 3
-                </tr>
-                <tr>
-                    ساعت 12 تا 4
-                </tr>
-                <tr>
-                    ساعت 1 تا 5
-                </tr>
-                <tr>
-                    ساعت 2 تا 6
-                </tr>
-                <tr>
-                    ساعت 3 تا 7
-                </tr>
-                <tr>
-                    ساعت 4 تا 8
-                </tr>
-                <tr>
-                    ساعت 5 تا 9
-                </tr>
-            </td>
-            <td>چهار شنبه
-                <tr>
-                    ساعت 10 تا 2
-                </tr>
-                <tr>
-                    ساعت 11 تا 3
-                </tr>
-                <tr>
-                    ساعت 12 تا 4
-                </tr>
-                <tr>
-                    ساعت 1 تا 5
-                </tr>
-                <tr>
-                    ساعت 2 تا 6
-                </tr>
-                <tr>
-                    ساعت 3 تا 7
-                </tr>
-                <tr>
-                    ساعت 4 تا 8
-                </tr>
-                <tr>
-                    ساعت 5 تا 9
-                </tr>
-            </td>
-            <td>پنجشنبه
-                <tr>
-                    ساعت 10 تا 2
-                </tr>
-                <tr>
-                    ساعت 11 تا 3
-                </tr>
-                <tr>
-                    ساعت 12 تا 4
-                </tr>
-                <tr>
-                    ساعت 1 تا 5
-                </tr>
-                <tr>
-                    ساعت 2 تا 6
-                </tr>
-                <tr>
-                    ساعت 3 تا 7
-                </tr>
-                <tr>
-                    ساعت 4 تا 8
-                </tr>
-                <tr>
-                    ساعت 5 تا 9
-                </tr>
-            </td>
-            <td>جمعه
-                <tr>
-                    ساعت 10 تا 2
-                </tr>
-                <tr>
-                    ساعت 11 تا 3
-                </tr>
-                <tr>
-                    ساعت 12 تا 4
-                </tr>
-                <tr>
-                    ساعت 1 تا 5
-                </tr>
-                <tr>
-                    ساعت 2 تا 6
-                </tr>
-                <tr>
-                    ساعت 3 تا 7
-                </tr>
-                <tr>
-                    ساعت 4 تا 8
-                </tr>
-                <tr>
-                    ساعت 5 تا 9
-                </tr>
-            </td>
-        </table>
-        <div>
+        <h2>votes (All vote <span>{{count}}</span> )</h2>
+    </section>
+    <section id="sectionTwo">
+
+        <!-- satday -->
+        <div class="divDay">
+            <p>10 - 14 ( <span>{{satCount10}}-vote</span> )</p>
+            <p>11 - 15 ( <span>{{satCount11}}-vote</span> )</p>
+            <p>12 - 16 ( <span>{{satCount12}}-vote</span> )</p>
+            <p>13 - 17 ( <span>{{satCount13}}-vote</span> )</p>
+            <p>14 - 18 ( <span>{{satCount14}}-vote</span> )</p>
+            <p>15 - 19 ( <span>{{satCount15}}-vote</span> )</p>
+            <p>16 - 20 ( <span>{{satCount16}}-vote</span> )</p>
+            <p>17 - 21 ( <span>{{satCount17}}-vote</span> )</p>
+            <p class="day">Saturday ( <span>{{satdayCount}}-vote</span> )</p>
+        </div>
+
+        <!-- sunday -->
+        <div class="divDay">
+            <p>10 - 14 ( <span>{{sunCount10}}-vote</span> )</p>
+            <p>11 - 15 ( <span>{{sunCount11}}-vote</span> )</p>
+            <p>12 - 16 ( <span>{{sunCount12}}-vote</span> )</p>
+            <p>13 - 17 ( <span>{{sunCount13}}-vote</span> )</p>
+            <p>14 - 18 ( <span>{{sunCount14}}-vote</span> )</p>
+            <p>15 - 19 ( <span>{{sunCount15}}-vote</span> )</p>
+            <p>16 - 20 ( <span>{{sunCount16}}-vote</span> )</p>
+            <p>17 - 21 ( <span>{{sunCount17}}-vote</span> )</p>
+            <p class="day">Sunday ( <span>{{sundayCount}}-vote</span> )</p>
+        </div>
+
+        <!-- monday -->
+        <div class="divDay">
+            <p>10 - 14 ( <span>{{monCount10}}-vote</span> )</p>
+            <p>11 - 15 ( <span>{{monCount11}}-vote</span> )</p>
+            <p>12 - 16 ( <span>{{monCount12}}-vote</span> )</p>
+            <p>13 - 17 ( <span>{{monCount13}}-vote</span> )</p>
+            <p>14 - 18 ( <span>{{monCount14}}-vote</span> )</p>
+            <p>15 - 19 ( <span>{{monCount15}}-vote</span> )</p>
+            <p>16 - 20 ( <span>{{monCount16}}-vote</span> )</p>
+            <p>17 - 21 ( <span>{{monCount17}}-vote</span> )</p>
+            <p class="day">Monday ( <span>{{mondayCount}}-vote</span> )</p>
+        </div>
+
+        <!-- Tuesdayday -->
+        <div class="divDay">
+            <p>10 - 14 ( <span>{{tuesCount10}}-vote</span> )</p>
+            <p>11 - 15 ( <span>{{tuesCount11}}-vote</span> )</p>
+            <p>12 - 16 ( <span>{{tuesCount12}}-vote</span> )</p>
+            <p>13 - 17 ( <span>{{tuesCount13}}-vote</span> )</p>
+            <p>14 - 18 ( <span>{{tuesCount14}}-vote</span> )</p>
+            <p>15 - 19 ( <span>{{tuesCount15}}-vote</span> )</p>
+            <p>16 - 20 ( <span>{{tuesCount16}}-vote</span> )</p>
+            <p>17 - 21 ( <span>{{tuesCount17}}-vote</span> )</p>
+            <p class="day">Tuesday ( <span>{{tuesdayCount}}-vote</span> )</p>
+        </div>
+
+        <!-- wednesday -->
+        <div class="divDay">
+            <p>10 - 14 ( <span>{{wednCount10}}-vote</span> )</p>
+            <p>11 - 15 ( <span>{{wednCount11}}-vote</span> )</p>
+            <p>12 - 16 ( <span>{{wednCount12}}-vote</span> )</p>
+            <p>13 - 17 ( <span>{{wednCount13}}-vote</span> )</p>
+            <p>14 - 18 ( <span>{{wednCount14}}-vote</span> )</p>
+            <p>15 - 19 ( <span>{{wednCount15}}-vote</span> )</p>
+            <p>16 - 20 ( <span>{{wednCount16}}-vote</span> )</p>
+            <p>17 - 21 ( <span>{{wednCount17}}-vote</span> )</p>
+            <p class="day">Wednesday ( <span>{{wedndayCount}}-vote</span> )</p>
+        </div>
+
+        <!-- thursday -->
+        <div class="divDay">
+            <p>10 - 14 ( <span>{{thurCount10}}-vote</span> )</p>
+            <p>11 - 15 ( <span>{{thurCount11}}-vote</span> )</p>
+            <p>12 - 16 ( <span>{{thurCount12}}-vote</span> )</p>
+            <p>13 - 17 ( <span>{{thurCount13}}-vote</span> )</p>
+            <p>14 - 18 ( <span>{{thurCount14}}-vote</span> )</p>
+            <p>15 - 19 ( <span>{{thurCount15}}-vote</span> )</p>
+            <p>16 - 20 ( <span>{{thurCount16}}-vote</span> )</p>
+            <p>17 - 21 ( <span>{{thurCount17}}-vote</span> )</p>
+            <p class="day">Thursday ( <span>{{thurdayCount}}-vote</span> )</p>
         </div>
     </section>
+    <section id="sectionThree">
+        
+        <!-- friysday -->
+        <div class="divDay">
+            <p>10 - 14 ( <span>{{friCount10}}-vote</span> )</p>
+            <p>11 - 15 ( <span>{{friCount11}}-vote</span> )</p>
+            <p>12 - 16 ( <span>{{friCount12}}-vote</span> )</p>
+            <p>13 - 17 ( <span>{{friCount13}}-vote</span> )</p>
+            <p>14 - 18 ( <span>{{friCount14}}-vote</span> )</p>
+            <p>15 - 19 ( <span>{{friCount15}}-vote</span> )</p>
+            <p>16 - 20 ( <span>{{friCount16}}-vote</span> )</p>
+            <p>17 - 21 ( <span>{{friCount17}}-vote</span> )</p>
+            <p class="day"> :Friyday ( <span>{{fridayCount}}-vote</span> )</p>
+        </div>
+    </section>
+
 </main>
