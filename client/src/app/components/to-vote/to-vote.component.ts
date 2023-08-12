@@ -73,7 +73,7 @@ export class ToVoteComponent {
               //prd10To14
               if (vote.saturdayTime?.prd10To14) {
                 this.prd10To14++
-                
+                console.log()
                 if (this.prd10To14 >= this.firstPriorityTime) {
                   this.nameFirstPriorityTime = "بین ساعت 10 تا 14";
                   this.prd10To14 = this.firstPriorityTime;
@@ -100,22 +100,22 @@ export class ToVoteComponent {
               if (vote.saturdayTime?.prd11To15) {
                 this.prd11To15++
 
-                if (this.prd11To15 >= this.firstPriorityTime){
+                if (this.prd11To15 >= this.firstPriorityTime) {
                   this.nameFirstPriorityTime = "بین ساعت 11 تا 15";
                   this.prd11To15 = this.firstPriorityTime;
                 }
 
-                if (this.prd11To15 >= this.secondPriorityTime && this.prd11To15 < this.firstPriorityTime){
+                if (this.prd11To15 >= this.secondPriorityTime && this.prd11To15 < this.firstPriorityTime) {
                   this.nameSecondPriorityTime = "بین ساعت 11 تا 15";
                   this.prd11To15 = this.secondPriorityTime;
                 }
 
-                if (this.prd11To15 >= this.thirdPriorityTime && this.prd11To15 < this.secondPriorityTime){
+                if (this.prd11To15 >= this.thirdPriorityTime && this.prd11To15 < this.secondPriorityTime) {
                   this.nameThirdPriorityTime = "بین ساعت 11 تا 15";
                   this.prd11To15 = this.thirdPriorityTime;
                 }
 
-                if (this.prd11To15 >= this.fourthPriorityTime && this.prd11To15 < this.thirdPriorityTime){
+                if (this.prd11To15 >= this.fourthPriorityTime && this.prd11To15 < this.thirdPriorityTime) {
                   this.nameFourthPriorityTime = "بین ساعت 11 تا 15";
                   this.prd11To15 = this.fourthPriorityTime;
                 }
@@ -125,22 +125,22 @@ export class ToVoteComponent {
               if (vote.saturdayTime?.prd12To16) {
                 this.prd12To16++
 
-                if (this.prd12To16 >= this.firstPriorityTime){
+                if (this.prd12To16 >= this.firstPriorityTime) {
                   this.nameFirstPriorityTime = "بین ساعت 12 تا 16";
                   this.prd12To16 = this.firstPriorityTime;
                 }
 
-                if (this.prd12To16 >= this.secondPriorityTime && this.prd12To16 < this.firstPriorityTime){
+                if (this.prd12To16 >= this.secondPriorityTime && this.prd12To16 < this.firstPriorityTime) {
                   this.nameSecondPriorityTime = "بین ساعت 12 تا 16";
                   this.prd12To16 = this.secondPriorityTime;
                 }
 
-                if (this.prd12To16 >= this.thirdPriorityTime && this.prd12To16 < this.secondPriorityTime){
+                if (this.prd12To16 >= this.thirdPriorityTime && this.prd12To16 < this.secondPriorityTime) {
                   this.nameThirdPriorityTime = "بین ساعت 12 تا 16";
                   this.prd12To16 = this.thirdPriorityTime;
                 }
 
-                if (this.prd12To16 >= this.fourthPriorityTime && this.prd12To16 < this.thirdPriorityTime){
+                if (this.prd12To16 >= this.fourthPriorityTime && this.prd12To16 < this.thirdPriorityTime) {
                   this.nameFourthPriorityTime = "بین ساعت 12 تا 16";
                   this.prd12To16 = this.fourthPriorityTime;
                 }
@@ -150,22 +150,22 @@ export class ToVoteComponent {
               if (vote.saturdayTime?.prd13To17) {
                 this.prd13To17++
 
-                if (this.prd13To17 >= this.firstPriorityTime){
+                if (this.prd13To17 >= this.firstPriorityTime) {
                   this.nameFirstPriorityTime = "بین ساعت 13 تا 17";
                   this.prd13To17 = this.firstPriorityTime;
                 }
 
-                if (this.prd13To17 >= this.secondPriorityTime && this.prd13To17 < this.firstPriorityTime){
+                if (this.prd13To17 >= this.secondPriorityTime && this.prd13To17 < this.firstPriorityTime) {
                   this.nameSecondPriorityTime = "بین ساعت 13 تا 17";
                   this.prd13To17 = this.secondPriorityTime;
                 }
 
-                if (this.prd13To17 >= this.thirdPriorityTime && this.prd13To17 < this.firstPriorityTime){
+                if (this.prd13To17 >= this.thirdPriorityTime && this.prd13To17 < this.firstPriorityTime) {
                   this.nameThirdPriorityTime = "بین ساعت 13 تا 17";
                   this.prd13To17 = this.thirdPriorityTime;
                 }
 
-                if (this.prd13To17 >= this.fourthPriorityTime && this.prd13To17 < this.firstPriorityTime){
+                if (this.prd13To17 >= this.fourthPriorityTime && this.prd13To17 < this.firstPriorityTime) {
                   this.nameFourthPriorityTime = "بین ساعت 13 تا 17";
                   this.prd13To17 = this.fourthPriorityTime;
                 }
@@ -175,12 +175,12 @@ export class ToVoteComponent {
               if (vote.saturdayTime?.prd14To18) {
                 this.prd14To18++
 
-                if (this.prd14To18 >= this.firstPriorityTime){
+                if (this.prd14To18 >= this.firstPriorityTime) {
                   this.nameFirstPriorityTime = "بین ساعت 14 تا 18";
                   this.prd14To18 = this.firstPriorityTime;
                 }
 
-                if (this.prd14To18 >= this.secondPriorityTime && this.prd14To18 < this.firstPriorityTime){
+                if (this.prd14To18 >= this.secondPriorityTime && this.prd14To18 < this.firstPriorityTime) {
                   this.nameSecondPriorityTime = "بین ساعت 14 تا 18";
                   this.prd14To18 = this.secondPriorityTime;
                   console.log(this.firstPriorityTime)

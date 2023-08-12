@@ -9,24 +9,24 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
 export class GetVoteService {
 
   public apiUrl = "http://localhost:5000/api/vote/get-all";
-  private currentVoteSource = new BehaviorSubject<vote | null>(null);
+  private currentVoteSource = new BehaviorSubject<vote[] | null>(null);
   public currentVote$ = this.currentVoteSource.asObservable();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.getVotes()
+   }
 
-  getVote()  :Observable<vote | null>{
-
-return this.http.get<vote>( this.apiUrl)
-.pipe(
-  map(vote =>{
-    if(vote){
-      this.currentVoteSource.next(vote);
-
-      return vote;
-    }
-
-    return null
-  })
-)
+  getVotes(): Observable<vote[] | null> {
+    return this.http.get<vote[]>(this.apiUrl)
+      .pipe(
+        map(votes  => {
+          if (votes) {
+            this.currentVoteSource.next(votes);
+            return votes;
+          }
+          return null;
+        })
+      );
   }
+  
 }
