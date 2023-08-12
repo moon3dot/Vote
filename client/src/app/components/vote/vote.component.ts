@@ -392,7 +392,7 @@ export class VoteComponent {
     this.http.post<vote>(this.apiUrl, voteData).subscribe({
       next: response => {
         this.userInput = response
-        // this.route.navigate(['thank'])
+        this.route.navigate(['thank'])
       }
     })
     console.log(this.userInput);
