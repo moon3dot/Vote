@@ -1,0 +1,86 @@
+main {
+    background-color: rgba(32, 32, 32, 1);
+    color: white;
+    min-width: 100vh;
+    min-height: calc(100vh - 10vh);
+
+    section {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+
+        .mainDiv {
+            margin-top: 1rem;
+            background-color: rgba(79, 79, 79, 0.416);
+            min-width: 65rem;
+            max-width: 65rem;
+            min-height: 70vh;
+            border-radius: 1rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding-top: 1rem;
+
+            .showVote {
+                direction: rtl;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .titleDiv {
+                    border: 0.2rem solid orangered;
+                    border-radius: 0.9rem;
+                    width: 20rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+
+                    .title {
+                        margin-top: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        font-size: 1.5rem;
+                        font-weight: 900;
+                        line-height: 2.5rem;
+                        color: aliceblue;
+                        span {
+                            color: orangered;
+                            font-size: 1rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                .timeDiv {
+                    border: 0.2rem solid orangered;
+                    border-radius: 0.9rem;
+                    width: 60rem;
+                    height: 15rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 2rem;
+                    
+                    .time{
+                        display: flex;
+                        border-bottom: 0.2rem solid orangered;
+                        font-size: 2rem;
+                        line-height: 2.5rem;
+                        span {
+                            color: orangered;
+                            font-size: 2rem;
+                            font-weight: 400;
+                            padding-right: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

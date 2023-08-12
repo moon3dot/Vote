@@ -27,6 +27,9 @@ import { HelpComponent } from './components/help/help.component';
 import { VoteComponent } from './components/vote/vote.component';
 import { AllVoteComponent } from './components/all-vote/all-vote.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { ToVoteComponent } from './components/to-vote/to-vote.component';
+import { HomeComponent } from './components/home/home.component';
+import { ThankComponent } from './components/thank/thank.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { MatMenuModule } from '@angular/material/menu';
     HeaderComponent,
     HelpComponent,
     VoteComponent,
-    AllVoteComponent
+    AllVoteComponent,
+    ToVoteComponent,
+    HomeComponent,
+    ThankComponent
 
   ],
   imports: [

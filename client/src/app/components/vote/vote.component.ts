@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { vote } from 'src/app/Models/vote.model';
 
 @Component({
@@ -12,7 +13,7 @@ export class VoteComponent {
   apiUrl = "http://localhost:5000/api/vote/vote";
   public userInput: vote | undefined;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private http: HttpClient, private route: Router) { }
 
   voteFg = this.fb.group({
     // day
@@ -389,7 +390,10 @@ export class VoteComponent {
 
     console.log(voteData);
     this.http.post<vote>(this.apiUrl, voteData).subscribe({
-      next: response => this.userInput = response
+      next: response => {
+        this.userInput = response
+        // this.route.navigate(['thank'])
+      }
     })
     console.log(this.userInput);
   }

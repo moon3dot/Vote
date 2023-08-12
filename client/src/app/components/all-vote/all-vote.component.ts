@@ -116,33 +116,92 @@ export class AllVoteComponent {
           if (vote.saturday)
             this.satdayCount++
           //time
-          if (vote.saturdayTime?.prd10To14)
+          if (vote.saturdayTime?.prd10To14) {
+
             this.satCount10++
 
-          if (vote.saturdayTime?.prd11To15)
+            if (this.maxCountTime <= this.satCount10) {
+              this.maxCountTime = this.satCount10
+
+              this.nameMaxTime = "10 - 14"
+            }
+          }
+          if (vote.saturdayTime?.prd11To15) {
             this.satCount11++
 
-          if (vote.saturdayTime?.prd12To16)
+            if (this.maxCountTime <= this.satCount11) {
+              this.maxCountTime = this.satCount11
+
+              this.nameMaxTime = "11 - 15"
+            }
+          }
+
+          if (vote.saturdayTime?.prd12To16) {
             this.satCount12++
 
-          if (vote.saturdayTime?.prd13To17)
+            if (this.maxCountTime <= this.satCount12) {
+              this.maxCountTime = this.satCount12
+
+              this.nameMaxTime = "12 - 16"
+            }
+          }
+
+          if (vote.saturdayTime?.prd13To17) {
             this.satCount13++
 
-          if (vote.saturdayTime?.prd14To18)
+            if (this.maxCountTime <= this.satCount13) {
+              this.maxCountTime = this.satCount13
+
+              this.nameMaxTime = "13 - 17"
+            }
+          }
+
+          if (vote.saturdayTime?.prd14To18) {
             this.satCount14++
 
-          if (vote.saturdayTime?.prd15To19)
+            if (this.maxCountTime <= this.satCount14) {
+              this.maxCountTime = this.satCount14
+
+              this.nameMaxTime = "14 - 18"
+            }
+          }
+
+          if (vote.saturdayTime?.prd15To19) {
             this.satCount15++
 
-          if (vote.saturdayTime?.prd16To20)
+            if (this.maxCountTime <= this.satCount15) {
+              this.maxCountTime = this.satCount15
+
+              this.nameMaxTime = "15 - 19"
+            }
+          }
+
+          if (vote.saturdayTime?.prd16To20) {
             this.satCount16++
 
-          if (vote.saturdayTime?.prd17To21)
+            if (this.maxCountTime <= this.satCount16) {
+              this.maxCountTime = this.satCount16
+
+              this.nameMaxTime = "16 - 20"
+            }
+          }
+
+          if (vote.saturdayTime?.prd17To21) {
             this.satCount17++
 
+
+            if (this.maxCountTime <= this.satCount17) {
+              this.maxCountTime = this.satCount17
+
+              this.nameMaxTime = "17 - 21"
+            }
+          }
+
           //day sunday
-          if (vote.sunday)
+          if (vote.sunday) {
             this.sundayCount++
+
+          }
           //time
           if (vote.sundayTime?.prd10To14)
             this.sunCount10++
@@ -197,31 +256,31 @@ export class AllVoteComponent {
             this.monCount17++
 
           //day Tuesday
-          if (vote.thursday)
-            this.thurdayCount++
+          if (vote.tuesday)
+            this.tuesdayCount++
           //time
-          if (vote.thursdayTime?.prd10To14)
+          if (vote.tuesdayTime?.prd10To14)
             this.tuesCount10++
 
-          if (vote.thursdayTime?.prd11To15)
+          if (vote.tuesdayTime?.prd11To15)
             this.tuesCount11++
 
-          if (vote.thursdayTime?.prd12To16)
+          if (vote.tuesdayTime?.prd12To16)
             this.tuesCount12++
 
-          if (vote.thursdayTime?.prd13To17)
+          if (vote.tuesdayTime?.prd13To17)
             this.tuesCount13++
 
-          if (vote.thursdayTime?.prd14To18)
+          if (vote.tuesdayTime?.prd14To18)
             this.tuesCount14++
 
-          if (vote.thursdayTime?.prd15To19)
+          if (vote.tuesdayTime?.prd15To19)
             this.tuesCount15++
 
-          if (vote.thursdayTime?.prd16To20)
+          if (vote.tuesdayTime?.prd16To20)
             this.tuesCount16++
 
-          if (vote.thursdayTime?.prd17To21)
+          if (vote.tuesdayTime?.prd17To21)
             this.tuesCount17++
 
 
@@ -315,47 +374,38 @@ export class AllVoteComponent {
           if (this.maxCountDay <= this.satdayCount) {
             this.maxCountDay = this.satdayCount;
 
-            this.nameMaxCount = "satday";
-
-            // max Count Time
-            if (this.maxCountTime <= this.satCount10) {
-              this.maxCountTime = this.satCount10
-
-              this.nameMaxTime = "10 - 14"
-
-              console.log(this.satCount10)
-            }
+            this.nameMaxCount = "Saturday";
           }
 
           if (this.maxCountDay <= this.sundayCount) {
             this.maxCountDay = this.sundayCount
 
-            this.nameMaxCount = "sunday";
+            this.nameMaxCount = "Sunday";
 
           }
 
           if (this.maxCountDay <= this.mondayCount) {
             this.maxCountDay = this.mondayCount
 
-            this.nameMaxCount = "monday";
+            this.nameMaxCount = "Monday";
           }
 
           if (this.maxCountDay <= this.tuesCount10) {
             this.maxCountDay = this.tuesCount10
 
-            this.nameMaxCount = "tuesday";
+            this.nameMaxCount = "Tuesday";
           }
 
           if (this.maxCountDay <= this.wedndayCount) {
             this.maxCountDay = this.wedndayCount
 
-            this.nameMaxCount = "wednday";
+            this.nameMaxCount = "Wednesday";
           }
 
           if (this.maxCountDay <= this.thurdayCount) {
             this.maxCountDay = this.thurdayCount
 
-            this.nameMaxCount = "thuerday";
+            this.nameMaxCount = "Thursday";
           }
 
           if (this.maxCountDay <= this.fridayCount) {

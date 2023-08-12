@@ -7,16 +7,21 @@ import { HeaderComponent } from './components/header/header.component';
 import { HelpComponent } from './components/help/help.component';
 import { VoteComponent } from './components/vote/vote.component';
 import { AllVoteComponent } from './components/all-vote/all-vote.component';
+import { HomeComponent } from './components/home/home.component';
+import { ThankComponent } from './components/thank/thank.component';
+import { ToVoteComponent } from './components/to-vote/to-vote.component';
 
 const routes: Routes = [
   { path: "singup", component: MainSingupComponent },
   { path: "voters", component: AllVoterComponent },
   { path: "login", component: LoginComponent },
   { path: "help", component: HelpComponent },
-  { path: "", component: VoteComponent },
-  { path: "home", component: VoteComponent },
+  { path: "", component: HomeComponent },
+  { path: "home", component: HomeComponent },
   { path: "vote", component: VoteComponent },
-  {path : "show-vote" , component:AllVoteComponent}
+  { path: "show-vote", component: AllVoteComponent },
+  { path: "thank", component: ThankComponent },
+  { path: "top-vote", component: ToVoteComponent }
 
 ];
 

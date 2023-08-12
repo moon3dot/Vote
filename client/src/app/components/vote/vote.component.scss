@@ -9,6 +9,7 @@ main {
         display: flex;
         justify-content: center;
         padding: 1rem;
+        border-bottom: 0.2rem solid orangered;
 
         .mainDiv {
             margin-top: 1rem;
@@ -21,11 +22,19 @@ main {
             flex-direction: column;
             align-items: center;
             padding-top: 1rem;
+            border-bottom: 1rem solid orangered;
 
-            form{
-                .day{
+            form {
+                button{
+                    width: 25rem;
+                    display: flex;
+                    background-color: orangered;
+                    margin: auto;
+                }
+                .day {
+                    color: orangered;
 
-                    .icon{
+                    .icon {
                         margin-top: 0.5rem;
                     }
                 }
